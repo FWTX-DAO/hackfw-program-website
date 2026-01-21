@@ -750,12 +750,18 @@
             transform: scale(1.05);
         }
 
-        .tier-card:hover {
+        .tier-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .tier-card-link:hover .tier-card {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .tier-card.premium:hover {
+        .tier-card-link:hover .tier-card.premium {
             transform: scale(1.05) translateY(-10px);
         }
 
@@ -1200,6 +1206,26 @@
                 </div>
             </section>
 
+            <section id="events" class="section" data-aos="fade-up">
+                <div class="container">
+                    <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+                    <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: var(--text-medium);">
+                        Join us at our upcoming workshops, meetups, and hackathon events.</p>
+                    <div class="events-embed" data-aos="zoom-in" data-aos-delay="200">
+                        <iframe
+                            src="https://luma.com/embed/calendar/cal-tc45LqQ7oFAHzNY/events"
+                            width="100%"
+                            height="450"
+                            frameborder="0"
+                            style="border: 1px solid #bfcbda88; border-radius: 12px; max-width: 800px; display: block; margin: 0 auto;"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
             <section class="sponsorship-section" data-aos="fade-up">
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up">Partnership Opportunities</h2>
@@ -1208,84 +1234,94 @@
                         investment.</p>
 
                     <div class="sponsorship-tiers">
-                        <div class="tier-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="tier-name">Innovation Leader</div>
-                            <div class="tier-investment">$15,000</div>
-                            <div class="tier-benefits">
-                                <h4>Benefits Include:</h4>
-                                <ul>
-                                    <li>Keynote presentation opportunity</li>
-                                    <li>Event naming rights</li>
-                                    <li>Dedicated challenge track</li>
-                                    <li>Premium talent recruiting access</li>
-                                    <li>Main stage branding focus</li>
-                                </ul>
+                        <a href="mailto:community@fwtx.city?subject=HackFW%20Sponsorship%20Inquiry%20-%20Innovation%20Leader%20%28%2415%2C000%29&body=Hi%20HackFW%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20Innovation%20Leader%20sponsorship%20tier.%0A%0AOrganization%3A%20%0AContact%20Name%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="tier-card-link" data-aos="fade-up" data-aos-delay="100" onclick="trackEvent('sponsor_tier_click', {tier: 'Innovation Leader', amount: '$15,000'})">
+                            <div class="tier-card">
+                                <div class="tier-name">Innovation Leader</div>
+                                <div class="tier-investment">$15,000</div>
+                                <div class="tier-benefits">
+                                    <h4>Benefits Include:</h4>
+                                    <ul>
+                                        <li>Keynote presentation opportunity</li>
+                                        <li>Event naming rights</li>
+                                        <li>Dedicated challenge track</li>
+                                        <li>Premium talent recruiting access</li>
+                                        <li>Main stage branding focus</li>
+                                    </ul>
+                                </div>
+                                <div class="tier-targets">Target: Major tech employers (2 partners)</div>
                             </div>
-                            <div class="tier-targets">Target: Major tech employers (2 partners)</div>
-                        </div>
+                        </a>
 
-                        <div class="tier-card premium" data-aos="fade-up" data-aos-delay="200">
-                            <div class="tier-name">Technology Partner</div>
-                            <div class="tier-investment">$5,000</div>
-                            <div class="tier-benefits">
-                                <h4>Benefits Include:</h4>
-                                <ul>
-                                    <li>Workshop hosting opportunity</li>
-                                    <li>API challenge sponsorship</li>
-                                    <li>Recruiting booth space</li>
-                                    <li>Judging panel influence</li>
-                                    <li>Tech stack showcase</li>
-                                </ul>
+                        <a href="mailto:community@fwtx.city?subject=HackFW%20Sponsorship%20Inquiry%20-%20Technology%20Partner%20%28%245%2C000%29&body=Hi%20HackFW%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20Technology%20Partner%20sponsorship%20tier.%0A%0AOrganization%3A%20%0AContact%20Name%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="tier-card-link" data-aos="fade-up" data-aos-delay="200" onclick="trackEvent('sponsor_tier_click', {tier: 'Technology Partner', amount: '$5,000'})">
+                            <div class="tier-card premium">
+                                <div class="tier-name">Technology Partner</div>
+                                <div class="tier-investment">$5,000</div>
+                                <div class="tier-benefits">
+                                    <h4>Benefits Include:</h4>
+                                    <ul>
+                                        <li>Workshop hosting opportunity</li>
+                                        <li>API challenge sponsorship</li>
+                                        <li>Recruiting booth space</li>
+                                        <li>Judging panel influence</li>
+                                        <li>Tech stack showcase</li>
+                                    </ul>
+                                </div>
+                                <div class="tier-targets">Target: Regional tech companies (3-4 partners)</div>
                             </div>
-                            <div class="tier-targets">Target: Regional tech companies (3-4 partners)</div>
-                        </div>
+                        </a>
 
-                        <div class="tier-card" data-aos="fade-up" data-aos-delay="300">
-                            <div class="tier-name">Workforce Builder</div>
-                            <div class="tier-investment">$1,000</div>
-                            <div class="tier-benefits">
-                                <h4>Benefits Include:</h4>
-                                <ul>
-                                    <li>Exhibition table space</li>
-                                    <li>Logo placement on materials</li>
-                                    <li>Networking event access</li>
-                                    <li>Student resume database</li>
-                                </ul>
+                        <a href="mailto:community@fwtx.city?subject=HackFW%20Sponsorship%20Inquiry%20-%20Workforce%20Builder%20%28%241%2C000%29&body=Hi%20HackFW%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20Workforce%20Builder%20sponsorship%20tier.%0A%0AOrganization%3A%20%0AContact%20Name%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="tier-card-link" data-aos="fade-up" data-aos-delay="300" onclick="trackEvent('sponsor_tier_click', {tier: 'Workforce Builder', amount: '$1,000'})">
+                            <div class="tier-card">
+                                <div class="tier-name">Workforce Builder</div>
+                                <div class="tier-investment">$1,000</div>
+                                <div class="tier-benefits">
+                                    <h4>Benefits Include:</h4>
+                                    <ul>
+                                        <li>Exhibition table space</li>
+                                        <li>Logo placement on materials</li>
+                                        <li>Networking event access</li>
+                                        <li>Student resume database</li>
+                                    </ul>
+                                </div>
+                                <div class="tier-targets">Target: Local businesses (5 partners)</div>
                             </div>
-                            <div class="tier-targets">Target: Local businesses (5 partners)</div>
-                        </div>
+                        </a>
 
-                        <div class="tier-card" data-aos="fade-up" data-aos-delay="400">
-                            <div class="tier-name">Developer Infrastructure</div>
-                            <div class="tier-investment">Credits/Tools</div>
-                            <div class="tier-benefits">
-                                <h4>Benefits Include:</h4>
-                                <ul>
-                                    <li>API credits & cloud infrastructure</li>
-                                    <li>Developer tools & platform access</li>
-                                    <li>Prize contributions & swag</li>
-                                    <li>Workshop hosting opportunities</li>
-                                    <li>Logo placement & recognition</li>
-                                </ul>
+                        <a href="mailto:community@fwtx.city?subject=HackFW%20Sponsorship%20Inquiry%20-%20Developer%20Infrastructure%20%28Credits%2FTools%29&body=Hi%20HackFW%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20Developer%20Infrastructure%20sponsorship%20tier.%0A%0AOrganization%3A%20%0AWhat%20we%20can%20offer%3A%20%0AContact%20Name%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="tier-card-link" data-aos="fade-up" data-aos-delay="400" onclick="trackEvent('sponsor_tier_click', {tier: 'Developer Infrastructure', amount: 'Credits/Tools'})">
+                            <div class="tier-card">
+                                <div class="tier-name">Developer Infrastructure</div>
+                                <div class="tier-investment">Credits/Tools</div>
+                                <div class="tier-benefits">
+                                    <h4>Benefits Include:</h4>
+                                    <ul>
+                                        <li>API credits & cloud infrastructure</li>
+                                        <li>Developer tools & platform access</li>
+                                        <li>Prize contributions & swag</li>
+                                        <li>Workshop hosting opportunities</li>
+                                        <li>Logo placement & recognition</li>
+                                    </ul>
+                                </div>
+                                <div class="tier-targets">Target: Dev tools, cloud providers, AI platforms (5-8 partners)
+                                </div>
                             </div>
-                            <div class="tier-targets">Target: Dev tools, cloud providers, AI platforms (5-8 partners)
-                            </div>
-                        </div>
+                        </a>
 
-                        <div class="tier-card" data-aos="fade-up" data-aos-delay="500">
-                            <div class="tier-name">Community Supporter</div>
-                            <div class="tier-investment">$500</div>
-                            <div class="tier-benefits">
-                                <h4>Benefits Include:</h4>
-                                <ul>
-                                    <li>Website logo placement</li>
-                                    <li>Devpost platform recognition</li>
-                                    <li>Social media mentions</li>
-                                    <li>Community newsletter features</li>
-                                </ul>
+                        <a href="mailto:community@fwtx.city?subject=HackFW%20Sponsorship%20Inquiry%20-%20Community%20Supporter%20%28%24500%29&body=Hi%20HackFW%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20the%20Community%20Supporter%20sponsorship%20tier.%0A%0AOrganization%3A%20%0AContact%20Name%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="tier-card-link" data-aos="fade-up" data-aos-delay="500" onclick="trackEvent('sponsor_tier_click', {tier: 'Community Supporter', amount: '$500'})">
+                            <div class="tier-card">
+                                <div class="tier-name">Community Supporter</div>
+                                <div class="tier-investment">$500</div>
+                                <div class="tier-benefits">
+                                    <h4>Benefits Include:</h4>
+                                    <ul>
+                                        <li>Website logo placement</li>
+                                        <li>Devpost platform recognition</li>
+                                        <li>Social media mentions</li>
+                                        <li>Community newsletter features</li>
+                                    </ul>
+                                </div>
+                                <div class="tier-targets">Target: Startups & community organizations (10 partners)</div>
                             </div>
-                            <div class="tier-targets">Target: Startups & community organizations (10 partners)</div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="cta-buttons" style="margin-top: 50px;" data-aos="fade-up" data-aos-delay="500">
@@ -1326,9 +1362,14 @@
                                 <img src="public/sponsors/tcu-logo-white.svg" alt="TCU Innovation" style="max-width: 180px; max-height: 70px; object-fit: contain;">
                             </a>
                         </div>
+                        <div class="sponsor-card" data-aos="zoom-in" data-aos-delay="500">
+                            <a href="https://liquidacre.com" target="_blank" class="sponsor-logo" style="text-decoration: none;">
+                                <img src="public/sponsors/liquidacre.png" alt="LiquidAcre" style="max-width: 220px; max-height: 60px; object-fit: contain;">
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="cta-buttons" style="margin-top: 50px; text-align: center;" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cta-buttons" style="margin-top: 50px; text-align: center;" data-aos="fade-up" data-aos-delay="600">
                         <a href="mailto:community@fwtx.city?subject=HackFW%20Partnership%20Inquiry"
                             class="btn btn-primary"
                             onclick="trackEvent('sponsor_inquiry_click', {source: 'partners_section'})">
