@@ -1,0 +1,21 @@
+# robots.txt for HackFW 2026 — https://hackfw.fwtx.city
+
+# Allow all crawlers access to main pages
+User-agent: *
+Allow: /
+Disallow: /.netlify/
+Crawl-delay: 10
+
+# Googlebot — no crawl-delay needed (Google ignores it)
+User-agent: Googlebot
+Allow: /
+Disallow: /.netlify/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /.netlify/
+Crawl-delay: 5
+
+# Sitemap
+Sitemap: https://hackfw.fwtx.city/sitemap.xml
