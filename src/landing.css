@@ -934,91 +934,9 @@
             letter-spacing: -0.02em;
         }
 
-        .organizer-lockup {
-            max-width: 680px;
-            margin: 26px auto 0;
-        }
-
-        .organizer-lockup__logos {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-            align-items: stretch;
-            gap: 14px;
-        }
-
-        .organizer-logo {
-            min-height: 128px;
-            padding: 24px 28px 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--radius-lg);
-            background: rgba(19, 19, 30, 0.72);
-            box-shadow:
-                0 0 0 1px rgba(255, 255, 255, 0.1),
-                0 14px 36px rgba(0, 0, 0, 0.16);
-            overflow: visible;
-            text-decoration: none;
-            transition-property: transform, box-shadow;
-            transition-duration: 200ms;
-            transition-timing-function: ease-out;
-        }
-
-        .organizer-logo:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 0 0 1px rgba(212, 147, 26, 0.3),
-                0 18px 42px rgba(0, 0, 0, 0.2);
-        }
-
-        .organizer-logo:focus-visible {
-            outline: 2px solid var(--amber-bright);
-            outline-offset: 4px;
-        }
-
-        .organizer-logo:active {
-            transform: scale(0.96);
-        }
-
-        .organizer-logo img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: none;
-            object-fit: contain;
-        }
-
-        .organizer-logo--fwtx img {
-            max-width: 200px;
-            filter: brightness(0) invert(1);
-            opacity: 0.92;
-        }
-
-        .organizer-logo--made img {
-            max-width: 270px;
-        }
-
-        .organizer-lockup__plus {
-            align-self: center;
-            color: var(--text-muted);
-            font-family: 'Syne', sans-serif;
-            font-size: 1.45rem;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .organizer-lockup__caption {
-            margin-top: 14px;
-            color: var(--text-secondary);
-            font-size: 0.78rem;
-            font-weight: 500;
-            letter-spacing: 0.035em;
-            line-height: 1.6;
-        }
-
         .industrial-base-copy {
             max-width: 68ch;
-            margin: 16px auto 0;
+            margin: 24px auto 0;
             color: var(--text-secondary);
             font-size: 0.98rem;
             line-height: 1.75;
@@ -1699,37 +1617,6 @@
 
             .industrial-base-lede {
                 font-size: 1.25rem;
-            }
-
-            .organizer-lockup {
-                margin-top: 22px;
-            }
-
-            .organizer-lockup__logos {
-                grid-template-columns: minmax(0, 1fr);
-                justify-items: center;
-                gap: 10px;
-            }
-
-            .organizer-logo {
-                min-height: 112px;
-                width: min(100%, 320px);
-                padding: 22px 26px 26px;
-            }
-
-            .organizer-logo--made img {
-                max-width: 250px;
-            }
-
-            .organizer-lockup__plus {
-                font-size: 1.2rem;
-            }
-
-            .organizer-lockup__caption {
-                max-width: 34ch;
-                margin-right: auto;
-                margin-left: auto;
-                font-size: 0.75rem;
             }
 
             .industrial-base-copy {
