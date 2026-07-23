@@ -6,6 +6,7 @@ import parse, {
 import { useEffect } from "react";
 
 import { HeroSpline } from "@/components/hero-spline";
+import { WinningSystemFeatures } from "@/components/winning-system-features";
 import landingMarkup from "@/landing.html?raw";
 
 const parserOptions: HTMLReactParserOptions = {
@@ -15,6 +16,13 @@ const parserOptions: HTMLReactParserOptions = {
       domNode.attribs.id === "hero-spline-root"
     ) {
       return <HeroSpline />;
+    }
+
+    if (
+      domNode instanceof DomElement &&
+      domNode.attribs.id === "winning-system-root"
+    ) {
+      return <WinningSystemFeatures />;
     }
   },
 };
