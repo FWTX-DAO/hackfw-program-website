@@ -1,4 +1,4 @@
-# robots.txt for HackFW 2026 — https://hackfw.fwtx.city
+# robots.txt for HackFW October 2026 — https://hack.fwtx.city
 
 # Allow all crawlers access to main pages
 User-agent: *
@@ -18,4 +18,4 @@ Disallow: /.netlify/
 Crawl-delay: 5
 
 # Sitemap
-Sitemap: https://hackfw.fwtx.city/sitemap.xml
+Sitemap: https://hack.fwtx.city/sitemap.xml

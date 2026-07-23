@@ -1,17 +1,25 @@
-# HackFW Website
+# HackFW October 2026 Website
 
-Landing page and brief for the HackFW hackathon event.
+Landing page for HackFW October 2026: Rebuilding System Density.
+
+The event runs October 1-31, 2026 with an in-person Fort Worth kickoff, a
+month-long virtual industrial-systems incubation, and an in-person closing
+Enterprise Demo Day.
 
 ## Files
 
 - `index.html` - Landing page
-- Images: `fwtx-dao.png`, `hackfw-flywheel.png`
+- `public/` - FWTX and confirmed partner assets
 - `netlify.toml` - Netlify config
 
 ## Deploy
 
-1. Upload files to web server or deploy to Netlify
-2. Test all links
+1. Deploy the repository to Netlify.
+2. Verify `https://hack.fwtx.city`, the Devpost registration CTA, structured
+   event data, social metadata, and public partner claims.
+
+Devpost is managed separately at `https://fwtx.devpost.com`; changes to this
+repository do not update Devpost dates, rules, prizes, or sponsors.
 
 ## Customize
 
