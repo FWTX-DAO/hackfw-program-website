@@ -1,2 +1,7 @@
 # Local Netlify folder
 .netlify
+
+# Local dependencies, build output, and disposable verification harnesses
+node_modules/
+dist/
+.scratch/

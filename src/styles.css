@@ -1,0 +1,201 @@
+@layer theme, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "./components/**/*.{ts,tsx}";
+
+@theme inline {
+  --color-card: var(--surface-raised);
+  --color-card-foreground: var(--text);
+  --color-muted-foreground: var(--text-secondary);
+}
+
+.spline-loader {
+  width: 34px;
+  height: 34px;
+  border: 2px solid rgb(0 229 160 / 14%);
+  border-top-color: var(--cyber);
+  border-radius: 999px;
+  animation: spline-spin 800ms linear infinite;
+}
+
+.hero-spline-card {
+  min-height: 560px;
+  isolation: isolate;
+}
+
+.hero-spline-card__viewport,
+.hero-spline-card__grid,
+.hero-spline-card__glow {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-spline-card__viewport {
+  z-index: 10;
+}
+
+.hero-spline-card__viewport canvas {
+  outline: 1px solid rgb(255 255 255 / 10%);
+  outline-offset: -1px;
+}
+
+.hero-spline-card__grid {
+  z-index: 1;
+  background-image:
+    linear-gradient(rgb(212 147 26 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(212 147 26 / 8%) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.hero-spline-card__glow {
+  z-index: 2;
+  background:
+    radial-gradient(circle at 62% 44%, rgb(0 229 160 / 14%), transparent 32%),
+    radial-gradient(circle at 36% 64%, rgb(212 147 26 / 18%), transparent 40%);
+}
+
+.hero-spline-card__status,
+.hero-spline-card__telemetry {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-spline-card__status {
+  top: 22px;
+  left: 22px;
+  gap: 9px;
+  color: var(--cyber);
+  font-size: 0.62rem;
+}
+
+.hero-spline-card__status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--cyber);
+  box-shadow: 0 0 14px rgb(0 229 160 / 70%);
+}
+
+.hero-spline-card__telemetry {
+  right: 22px;
+  bottom: 22px;
+  gap: 14px;
+  color: var(--text-tertiary);
+  font-size: 0.56rem;
+}
+
+.hero-spline-card__telemetry span + span {
+  position: relative;
+}
+
+.hero-spline-card__telemetry span + span::before {
+  content: "/";
+  position: absolute;
+  right: calc(100% + 5px);
+  color: var(--amber);
+}
+
+.spline-static {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.spline-static__core {
+  width: 142px;
+  height: 142px;
+  border-radius: 30%;
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 8%), transparent 52%),
+    var(--surface-overlay);
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 9%),
+    0 0 72px rgb(212 147 26 / 22%);
+  transform: rotate(45deg);
+}
+
+.spline-static__orbit {
+  position: absolute;
+  border: 1px solid rgb(0 229 160 / 20%);
+  border-radius: 50%;
+}
+
+.spline-static__orbit--one {
+  width: 280px;
+  height: 280px;
+  transform: rotateX(64deg) rotateZ(18deg);
+}
+
+.spline-static__orbit--two {
+  width: 380px;
+  height: 380px;
+  border-color: rgb(212 147 26 / 18%);
+  transform: rotateX(62deg) rotateZ(-32deg);
+}
+
+.spline-static__node {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.spline-static__node--amber {
+  top: 31%;
+  right: 24%;
+  background: var(--amber);
+  box-shadow: 0 0 24px rgb(212 147 26 / 70%);
+}
+
+.spline-static__node--cyber {
+  bottom: 27%;
+  left: 24%;
+  background: var(--cyber);
+  box-shadow: 0 0 24px rgb(0 229 160 / 70%);
+}
+
+@media (max-width: 960px) {
+  .hero-spline-card {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-spline-card {
+    min-height: 360px;
+  }
+
+  .hero-spline-card__status {
+    top: 16px;
+    left: 16px;
+  }
+
+  .hero-spline-card__telemetry {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spline-loader {
+    animation: none;
+  }
+}
+
+@keyframes spline-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
