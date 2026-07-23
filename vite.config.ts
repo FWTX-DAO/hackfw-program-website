@@ -8,6 +8,23 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [tanstackStart(), react(), tailwindcss(), netlify()],
+  ssr: {
+    // Netlify's function bundler must not externalize this mixed ESM/CJS chain.
+    noExternal: [
+      "html-react-parser",
+      "html-dom-parser",
+      "htmlparser2",
+      "domhandler",
+      "domelementtype",
+      "domutils",
+      "dom-serializer",
+      "entities",
+      "react-property",
+      "style-to-js",
+      "style-to-object",
+      "inline-style-parser",
+    ],
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

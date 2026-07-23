@@ -1,5 +1,6 @@
 # Local Netlify folder
 .netlify
+deno.lock
 
 # Local dependencies, build output, and disposable verification harnesses
 node_modules/
