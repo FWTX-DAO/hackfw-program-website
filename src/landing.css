@@ -354,6 +354,14 @@
         /* ========== BUTTONS ========== */
 
         .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .hero .cta-buttons {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 12px;
@@ -361,9 +369,8 @@
         }
 
         .btn {
-            min-height: 54px;
-            padding: 12px 14px;
-            font-size: 0.76rem;
+            padding: 13px 30px;
+            font-size: 0.8rem;
             border: none;
             border-radius: var(--radius);
             cursor: pointer;
@@ -372,14 +379,21 @@
             transition-duration: 200ms;
             transition-timing-function: ease-out;
             font-weight: 600;
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .hero .btn {
+            min-height: 54px;
+            padding: 12px 14px;
+            font-size: 0.76rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-family: 'IBM Plex Mono', monospace;
-            letter-spacing: 0.04em;
             line-height: 1.35;
             text-align: center;
-            text-transform: uppercase;
         }
 
         .btn-primary {
@@ -1530,7 +1544,7 @@
                 margin-top: 4px;
             }
 
-            .cta-buttons {
+            .hero .cta-buttons {
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
@@ -1668,6 +1682,11 @@
             .hero-visual {
                 height: clamp(330px, 92vw, 380px);
                 border-radius: 14px;
+            }
+
+            .cta-buttons {
+                display: grid;
+                grid-template-columns: 1fr;
             }
 
             .date-milestone {
