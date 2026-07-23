@@ -39,23 +39,8 @@ export const structuredData = [
     "sponsor": [
       {
         "@type": "Organization",
-        "name": "Featherless AI",
-        "url": "https://featherless.ai"
-      },
-      {
-        "@type": "Organization",
-        "name": "University of Texas Arlington",
-        "url": "https://www.uta.edu"
-      },
-      {
-        "@type": "Organization",
         "name": "Y2",
         "url": "https://y2.dev"
-      },
-      {
-        "@type": "Organization",
-        "name": "TCU Innovation",
-        "url": "https://www.tcu.edu/innovation/"
       },
       {
         "@type": "Organization",
