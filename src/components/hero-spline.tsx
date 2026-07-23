@@ -104,7 +104,7 @@ export function HeroSpline() {
 
       <div className="hero-spline-card__status" aria-hidden="true">
         <span />
-        Live system model
+        Forged in Fort Worth
       </div>
       <div className="hero-spline-card__telemetry" aria-hidden="true">
         <span>EDGE</span>
