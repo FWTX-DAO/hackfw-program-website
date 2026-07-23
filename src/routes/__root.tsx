@@ -13,7 +13,7 @@ import "@/app.css";
 const title =
   "HackFW MADE Challenge - Rebuilding System Density | Fort Worth";
 const description =
-  "The HackFW MADE Challenge combines industrial hardware, sovereign edge data, and AI compute for thermal management, power safety, and predictive maintenance. In-person kickoff, month-long virtual incubation, and in-person Enterprise Demo Day.";
+  "HackFW is a month-long industrial systems builder program with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE. Locations, times, calendar, and tracks are TBA.";
 const socialImage = "https://cdn.fwtx.city/ogimage.png";
 
 export const Route = createRootRoute({
@@ -30,7 +30,7 @@ export const Route = createRootRoute({
       {
         name: "keywords",
         content:
-          "HackFW, MADE Challenge, TechFW MADE, Fort Worth hackathon, industrial AI, advanced manufacturing, edge computing, Web3 data sovereignty, predictive maintenance",
+          "HackFW, MADE Challenge, TechFW MADE, Fort Worth hackathon, industrial systems, advanced manufacturing, technical workforce, virtual incubation",
       },
       { name: "author", content: "Fort Worth DAO LCA" },
       {

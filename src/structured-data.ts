@@ -9,21 +9,21 @@ export const structuredData = [
       "HackFW October 2026",
       "MADE Challenge"
     ],
-    "description": "An industrial systems challenge combining physical prototypes, sovereign edge data pipelines, and AI compute for thermal management, power and industrial safety, and predictive maintenance. The program opens with an in-person Fort Worth kickoff, continues as a month-long virtual incubation, and closes with an in-person Enterprise Demo Day.",
+    "description": "A month-long industrial systems builder program with opening and closing gatherings in Fort Worth plus virtual incubation and technical support from Fort Worth DAO and MADE. Fort Worth locations, times, program calendar, and industrial tracks are to be announced.",
     "image": "https://cdn.fwtx.city/ogimage.png",
     "url": "https://hack.fwtx.city",
-    "startDate": "2026-10-01T00:00:00-05:00",
-    "endDate": "2026-10-31T23:59:59-05:00",
+    "startDate": "2026-10-01",
+    "endDate": "2026-10-31",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
     "location": [
       {
         "@type": "VirtualLocation",
-        "url": "https://fwtx.devpost.com"
+        "url": "https://hackfw.devpost.com"
       },
       {
         "@type": "Place",
-        "name": "Fort Worth - venue to be announced",
+        "name": "Fort Worth - location and time to be announced",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Fort Worth",
@@ -75,7 +75,7 @@ export const structuredData = [
     ],
     "offers": {
       "@type": "Offer",
-      "url": "https://fwtx.devpost.com",
+      "url": "https://hackfw.devpost.com",
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
@@ -96,9 +96,8 @@ export const structuredData = [
       "digital sovereignty",
       "smart manufacturing",
       "edge computing",
-      "thermal management",
-      "industrial safety",
-      "predictive maintenance",
+      "industrial systems",
+      "technical workforce",
       "reindustrialization"
     ]
   },
@@ -135,7 +134,7 @@ export const structuredData = [
     "sameAs": [
       "https://twitter.com/fwtxdao",
       "https://discord.gg/6pHcxqh6zF",
-      "https://fwtx.devpost.com"
+      "https://hackfw.devpost.com"
     ],
     "email": "community@fwtx.city",
     "knowsAbout": [
@@ -156,7 +155,7 @@ export const structuredData = [
     "@type": "EducationalOccupationalProgram",
     "@id": "https://hack.fwtx.city/#program",
     "name": "HackFW MADE Challenge",
-    "description": "A hands-on workforce development program combining industrial hardware, edge telemetry, sovereign data pipelines, and applied AI to solve real physical-infrastructure problems.",
+    "description": "A hands-on industrial workforce and builder program with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE.",
     "url": "https://hack.fwtx.city",
     "provider": {
       "@type": "Organization",
@@ -207,7 +206,7 @@ export const structuredData = [
       "HackFW MADE Challenge"
     ],
     "url": "https://hack.fwtx.city",
-    "description": "Fort Worth's industrial systems hackathon and builder ecosystem",
+    "description": "Fort Worth's month-long industrial systems builder program and partner network",
     "publisher": {
       "@type": "Organization",
       "@id": "https://hack.fwtx.city/#organization"
