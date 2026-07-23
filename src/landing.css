@@ -179,10 +179,23 @@
         }
 
         .discord-icon {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
-            margin-right: 5px;
+        }
+
+        .nav-links .discord-link,
+        .footer-links .discord-link {
+            width: 44px;
+            min-width: 44px;
+            min-height: 44px;
+            padding: 0;
+            justify-content: center;
+            border: 1px solid var(--border);
+        }
+
+        .discord-link:active {
+            transform: scale(0.96);
         }
 
         /* ========== HERO ========== */
@@ -220,7 +233,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(4.4rem, 6vw, 6.4rem);
+            font-size: clamp(3.6rem, 4.4vw, 4.5rem);
             font-weight: 800;
             font-family: 'Syne', sans-serif;
             margin-bottom: 0;
@@ -231,14 +244,18 @@
         }
 
         .hero-wordmark {
+            display: flex;
+            align-items: center;
+            gap: clamp(14px, 1.5vw, 20px);
             margin-bottom: 26px;
         }
 
         .made-challenge {
             display: inline-flex;
+            position: relative;
             align-items: center;
-            gap: 12px;
-            margin-top: 18px;
+            padding-left: clamp(14px, 1.4vw, 18px);
+            margin-top: 0;
             min-height: 44px;
             text-decoration: none;
             transition-property: transform;
@@ -249,13 +266,15 @@
         .made-challenge::before,
         .made-challenge::after {
             content: "";
-            width: clamp(28px, 5vw, 64px);
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--cyber));
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: clamp(58px, 7vw, 78px);
+            background: linear-gradient(180deg, transparent, var(--cyber), transparent);
         }
 
         .made-challenge::after {
-            background: linear-gradient(90deg, var(--cyber), transparent);
+            display: none;
         }
 
         .made-challenge:hover {
@@ -264,7 +283,7 @@
 
         .made-challenge img {
             display: block;
-            width: clamp(220px, 25vw, 310px);
+            width: clamp(160px, 12vw, 185px);
             height: auto;
             filter: drop-shadow(0 0 18px rgba(0, 229, 160, 0.08));
             outline: none;
@@ -431,46 +450,6 @@
             transform: translateY(0) scale(0.96);
         }
 
-        /* ========== STATS ========== */
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 12px;
-            margin: 38px 0 0;
-        }
-
-        .stat-item {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 3.35rem;
-            font-weight: 800;
-            font-family: 'Syne', sans-serif;
-            color: var(--amber);
-            display: block;
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-
-        .stat-number--tba {
-            font-size: 2.15rem;
-            letter-spacing: 0.04em;
-        }
-
-        .stat-label {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.74rem;
-            line-height: 1.5;
-            color: var(--text-secondary);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            text-wrap: pretty;
-        }
-
         /* ========== SECTIONS ========== */
 
         .section {
@@ -493,6 +472,12 @@
 
         /* ========== MISSION ========== */
 
+        .mission-title {
+            line-height: 1.18;
+            padding: 0.08em 0 0.16em;
+            overflow: visible;
+        }
+
         .mission-content {
             background: var(--surface-raised);
             padding: 44px;
@@ -514,6 +499,35 @@
 
         .mission-content a:not(.btn) {
             color: var(--amber);
+        }
+
+        .mission-proof {
+            display: grid;
+            grid-template-columns: minmax(180px, 0.75fr) minmax(0, 1.75fr);
+            gap: 16px 28px;
+            align-items: center;
+            margin: 28px 0;
+            padding: 22px 24px;
+            border: 1px solid var(--border-cyber);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(120deg, rgba(0, 229, 160, 0.07), transparent 62%),
+                rgba(7, 7, 12, 0.42);
+        }
+
+        .mission-proof strong {
+            color: var(--cyber);
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+        }
+
+        .mission-proof span {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.7;
+            text-wrap: pretty;
         }
 
         /* ========== FLYWHEEL ========== */
@@ -1212,19 +1226,28 @@
         }
 
         .footer-content {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
             align-items: center;
+            gap: 24px;
+        }
+
+        .footer-links {
+            display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 4px 18px;
         }
 
         .footer-links a {
             color: var(--text-tertiary);
             text-decoration: none;
-            margin-left: 18px;
+            min-height: 44px;
             font-weight: 500;
-            transition: color 0.2s;
+            transition-property: color, background-color, border-color, transform;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
             display: inline-flex;
             align-items: center;
             font-size: 0.8rem;
@@ -1252,7 +1275,7 @@
             }
 
             .hero h1 {
-                font-size: clamp(4rem, 7vw, 5.5rem);
+                font-size: clamp(3.6rem, 4.8vw, 4.5rem);
             }
         }
 
@@ -1301,13 +1324,8 @@
                 margin-left: auto;
             }
 
-            .cta-buttons,
-            .stats {
+            .cta-buttons {
                 justify-content: center;
-            }
-
-            .stat-item {
-                text-align: center;
             }
         }
 
@@ -1317,7 +1335,7 @@
             }
 
             .hero h1 {
-                font-size: clamp(2.5rem, 12.5vw, 6rem);
+                font-size: clamp(3.4rem, 8.4vw, 4.25rem);
             }
 
             .hero .subtitle {
@@ -1381,26 +1399,6 @@
                 font-size: 0.8rem;
             }
 
-            .stat-number {
-                font-size: 2.8rem;
-            }
-
-            .stat-number--tba {
-                font-size: 2.15rem;
-            }
-
-            .stats {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 8px;
-                margin-top: 30px;
-            }
-
-            .stat-label {
-                font-size: 0.7rem;
-                line-height: 1.45;
-                letter-spacing: 0.07em;
-            }
-
             .sponsorship-section,
             .sponsors-section {
                 padding: 48px 20px;
@@ -1408,6 +1406,12 @@
 
             .mission-content {
                 padding: 28px 20px;
+            }
+
+            .mission-proof {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 20px;
             }
 
             .flywheel {
@@ -1419,7 +1423,7 @@
             }
 
             .made-challenge img {
-                width: 210px;
+                width: clamp(160px, 24vw, 185px);
             }
 
             .brand-partners-grid {
@@ -1493,9 +1497,8 @@
             }
 
             .discord-icon {
-                width: 14px;
-                height: 14px;
-                margin-right: 3px;
+                width: 18px;
+                height: 18px;
             }
 
             .hero {
@@ -1510,11 +1513,31 @@
             .hero .subtitle {
                 font-size: 0.68rem;
                 line-height: 1.7;
-                letter-spacing: 0.16em;
+                max-width: 32ch;
+                margin: 0 auto 16px;
+                letter-spacing: 0.12em;
             }
 
             .hero-wordmark {
+                flex-direction: column;
+                gap: 12px;
                 margin-bottom: 22px;
+            }
+
+            .made-challenge {
+                padding-left: 0;
+            }
+
+            .made-challenge::before {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.25rem, 10.5vw, 2.65rem);
+            }
+
+            .made-challenge img {
+                width: min(210px, 66vw);
             }
 
             .hero .tagline {
@@ -1559,11 +1582,6 @@
             .hero .btn {
                 min-height: 52px;
                 width: 100%;
-            }
-
-            .stats {
-                gap: 6px;
-                margin-top: 28px;
             }
 
             .calendar-placeholder {
@@ -1732,7 +1750,8 @@
             }
 
             .footer-content {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                justify-items: center;
                 text-align: center;
             }
 
@@ -1744,8 +1763,7 @@
             }
 
             .footer-links a {
-                min-height: 40px;
-                margin-left: 0;
+                min-height: 44px;
                 font-size: 0.78rem;
             }
 
@@ -1753,19 +1771,6 @@
                 font-size: 0.78rem;
             }
 
-            .stat-number {
-                font-size: 2.75rem;
-            }
-
-            .stat-number--tba {
-                font-size: 2.15rem;
-            }
-
-            .stat-label {
-                font-size: 0.72rem;
-                line-height: 1.45;
-                letter-spacing: 0.06em;
-            }
         }
 
         @media (max-width: 380px) {
