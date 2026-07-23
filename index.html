@@ -92,6 +92,7 @@
     <link rel="icon" type="image/svg+xml" href="https://cdn.fwtx.city/logo.svg">
     <link rel="apple-touch-icon" href="https://cdn.fwtx.city/logo.svg">
     <link rel="preload" as="image" href="public/hackfw-flywheel.png" type="image/png">
+    <link rel="preload" as="image" href="public/sponsors/made-logo.png" type="image/png">
 
     <!-- Google Fonts — Syne (display) + IBM Plex Mono (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -522,7 +523,7 @@
             letter-spacing: -0.02em;
         }
 
-        .logo img {
+        .logo-symbol {
             width: 44px;
             height: 44px;
             filter: drop-shadow(0 0 10px rgba(212, 147, 26, 0.35));
@@ -535,14 +536,13 @@
             line-height: 0.92;
         }
 
-        .logo-copy small {
-            margin-top: 6px;
-            color: var(--cyber);
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.54rem;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
+        .logo-made-mark {
+            width: 86px;
+            height: auto;
+            margin-top: 3px;
+            display: block;
+            filter: drop-shadow(0 0 8px rgba(0, 229, 160, 0.08));
+            outline: none;
         }
 
         .nav-links {
@@ -613,15 +613,9 @@
             align-items: center;
             gap: 12px;
             margin-top: 18px;
-            color: var(--text);
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            line-height: 1;
+            min-height: 44px;
             text-decoration: none;
-            text-transform: uppercase;
-            transition-property: color, transform;
+            transition-property: transform;
             transition-duration: 180ms;
             transition-timing-function: ease-out;
         }
@@ -639,8 +633,15 @@
         }
 
         .made-challenge:hover {
-            color: var(--cyber);
             transform: translateY(-2px);
+        }
+
+        .made-challenge img {
+            display: block;
+            width: clamp(220px, 25vw, 310px);
+            height: auto;
+            filter: drop-shadow(0 0 18px rgba(0, 229, 160, 0.08));
+            outline: none;
         }
 
         .hero .subtitle {
@@ -1773,9 +1774,14 @@
                 font-size: 1.2rem;
             }
 
-            .logo img {
+            .logo-symbol {
                 width: 28px;
                 height: 28px;
+            }
+
+            .logo-made-mark {
+                width: 72px;
+                height: auto;
             }
 
             .date-location {
@@ -1810,8 +1816,11 @@
             }
 
             .made-challenge {
-                font-size: 1rem;
-                letter-spacing: 0.12em;
+                gap: 8px;
+            }
+
+            .made-challenge img {
+                width: 210px;
             }
 
             .sponsors-grid {
@@ -1848,11 +1857,14 @@
             <div class="container">
                 <div class="header-content">
                     <div class="logo">
-                        <img src="https://cdn.fwtx.city/logo.svg" alt="Fort Worth DAO - FWTX Logo"
+                        <img class="logo-symbol" src="https://cdn.fwtx.city/logo.svg"
+                            alt="Fort Worth DAO - FWTX Logo"
                             width="44" height="44">
                         <span class="logo-copy">
                             <span>HackFW</span>
-                            <small>MADE Challenge</small>
+                            <img class="logo-made-mark" src="public/sponsors/made-logo.png"
+                                alt="MADE Challenge" width="1600" height="600"
+                                loading="eager" decoding="async">
                         </span>
                     </div>
                     <nav class="nav-links" aria-label="Main navigation">
@@ -1883,7 +1895,12 @@
                         <h1>HackFW</h1>
                         <a class="made-challenge"
                             href="https://www.techfortworth.org/made-manufacturing-accelerator"
-                            target="_blank" rel="noopener noreferrer">MADE Challenge</a>
+                            target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the MADE Manufacturing Accelerator">
+                            <img src="public/sponsors/made-logo.png"
+                                alt="MADE Manufacturing Accelerator and Development Engine"
+                                width="1600" height="600" loading="eager" decoding="async">
+                        </a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <div class="tagline">Rebuilding System Density — Building the Next 20 Years of American Industrial Dominance</div>
