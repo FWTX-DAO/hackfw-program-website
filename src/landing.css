@@ -244,17 +244,17 @@
         }
 
         .hero-wordmark {
-            display: flex;
-            align-items: center;
-            gap: clamp(14px, 1.5vw, 20px);
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: clamp(10px, 1.2vw, 14px);
             margin-bottom: 26px;
         }
 
         .made-challenge {
             display: inline-flex;
-            position: relative;
             align-items: center;
-            padding-left: clamp(14px, 1.4vw, 18px);
+            gap: clamp(12px, 1.4vw, 18px);
             margin-top: 0;
             min-height: 44px;
             text-decoration: none;
@@ -263,30 +263,26 @@
             transition-timing-function: ease-out;
         }
 
-        .made-challenge::before,
-        .made-challenge::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            width: 1px;
-            height: clamp(58px, 7vw, 78px);
-            background: linear-gradient(180deg, transparent, var(--cyber), transparent);
-        }
-
-        .made-challenge::after {
-            display: none;
-        }
-
         .made-challenge:hover {
             transform: translateY(-2px);
         }
 
         .made-challenge img {
             display: block;
-            width: clamp(160px, 12vw, 185px);
+            width: clamp(170px, 14vw, 210px);
             height: auto;
             filter: drop-shadow(0 0 18px rgba(0, 229, 160, 0.08));
             outline: none;
+        }
+
+        .made-challenge-title {
+            color: var(--amber);
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            white-space: nowrap;
         }
 
         .hero .subtitle {
@@ -1297,6 +1293,10 @@
                 text-align: center;
             }
 
+            .hero-wordmark {
+                align-items: center;
+            }
+
             .hero-intro {
                 grid-column: 1;
                 grid-row: 1;
@@ -1418,12 +1418,8 @@
                 padding: 44px 20px;
             }
 
-            .made-challenge {
-                gap: 8px;
-            }
-
             .made-challenge img {
-                width: clamp(160px, 24vw, 185px);
+                width: clamp(165px, 25vw, 195px);
             }
 
             .brand-partners-grid {
@@ -1519,17 +1515,8 @@
             }
 
             .hero-wordmark {
-                flex-direction: column;
                 gap: 12px;
                 margin-bottom: 22px;
-            }
-
-            .made-challenge {
-                padding-left: 0;
-            }
-
-            .made-challenge::before {
-                display: none;
             }
 
             .hero h1 {
@@ -1537,7 +1524,11 @@
             }
 
             .made-challenge img {
-                width: min(210px, 66vw);
+                width: min(150px, 34vw);
+            }
+
+            .made-challenge-title {
+                font-size: clamp(1.3rem, 7vw, 1.65rem);
             }
 
             .hero .tagline {
