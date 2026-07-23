@@ -37,11 +37,12 @@
             --cyber: #00E5A0;
             --cyber-dim: rgba(0, 229, 160, 0.06);
             --text: #E8E4DC;
-            --text-secondary: #908C84;
-            --text-tertiary: #56524A;
-            --border: rgba(232, 228, 220, 0.06);
-            --border-amber: rgba(212, 147, 26, 0.18);
-            --border-cyber: rgba(0, 229, 160, 0.14);
+            --text-secondary: #B3AEA5;
+            --text-tertiary: #858078;
+            --text-muted: #858078;
+            --border: rgba(232, 228, 220, 0.1);
+            --border-amber: rgba(212, 147, 26, 0.34);
+            --border-cyber: rgba(0, 229, 160, 0.26);
             --radius: 6px;
             --radius-lg: 12px;
         }
@@ -409,9 +410,9 @@
         }
 
         .btn-secondary {
-            background: transparent;
+            background: rgba(212, 147, 26, 0.025);
             border: 1px solid var(--border-amber);
-            color: var(--amber);
+            color: var(--amber-bright);
         }
 
         .btn-secondary:hover {
@@ -500,7 +501,7 @@
             margin-bottom: 0;
         }
 
-        .mission-content a {
+        .mission-content a:not(.btn) {
             color: var(--amber);
         }
 
@@ -990,7 +991,7 @@
         }
 
         .tier-name {
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: var(--text-secondary);
             margin-bottom: 6px;
@@ -1008,9 +1009,9 @@
         }
 
         .tier-description {
-            font-size: 0.72rem;
+            font-size: 0.78rem;
             color: var(--text-tertiary);
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .tier-benefits {
@@ -1030,7 +1031,7 @@
             position: relative;
             color: var(--text-secondary);
             line-height: 1.4;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
         }
 
         .tier-benefits li.included::before {
@@ -1047,7 +1048,7 @@
 
         .tier-benefits li.not-included {
             color: var(--text-tertiary);
-            opacity: 0.4;
+            opacity: 0.76;
         }
 
         .tier-benefits li.not-included::before {
@@ -1059,7 +1060,7 @@
             height: 10px;
             background: var(--text-tertiary);
             border-radius: 2px;
-            opacity: 0.15;
+            opacity: 0.45;
         }
 
         .tier-cta {
@@ -1067,10 +1068,11 @@
         }
 
         .tier-cta .btn {
+            min-height: 48px;
             width: 100%;
             text-align: center;
-            padding: 10px 16px;
-            font-size: 0.72rem;
+            padding: 12px 16px;
+            font-size: 0.78rem;
         }
 
         .tier-card.featured .tier-cta .btn {
@@ -1395,6 +1397,86 @@
             justify-content: center;
             margin-top: 44px;
             text-align: center;
+        }
+
+        .industrial-base-cta .btn {
+            min-width: 180px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donation-section {
+            text-align: center;
+        }
+
+        .donation-copy {
+            max-width: 760px;
+            margin: 0 auto 14px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .donation-disclosure {
+            max-width: 760px;
+            margin: 0 auto 34px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.75;
+        }
+
+        .donation-disclosure strong {
+            color: var(--amber-bright);
+        }
+
+        .donation-cta {
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .donation-cta .btn {
+            min-width: 280px;
+            min-height: 62px;
+            padding: 18px 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            box-shadow:
+                0 0 0 1px rgba(212, 147, 26, 0.24),
+                0 14px 44px rgba(212, 147, 26, 0.16);
+        }
+
+        .get-involved-content {
+            text-align: center;
+            border-left: 3px solid var(--cyber);
+        }
+
+        .get-involved-title {
+            margin-bottom: 16px;
+            color: var(--amber);
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .get-involved-copy {
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+        }
+
+        .get-involved-cta {
+            justify-content: center;
+        }
+
+        .get-involved-content .btn-primary {
+            color: var(--void);
+        }
+
+        .get-involved-content .btn-secondary {
+            color: var(--amber-bright);
         }
 
         /* ========== BROUGHT TO YOU ========== */
@@ -1739,6 +1821,25 @@
         }
 
         @media (max-width: 520px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+
+            .section {
+                padding: 64px 0;
+            }
+
+            .bounty-section,
+            .sponsorship-section,
+            .sponsors-section {
+                padding: 48px 0;
+            }
+
             header {
                 padding: 10px 0 8px;
             }
@@ -1810,6 +1911,15 @@
                 grid-template-columns: 1fr;
             }
 
+            .btn {
+                min-height: 48px;
+                font-size: 0.82rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
             .date-milestone {
                 display: grid;
                 grid-template-columns: minmax(118px, 0.8fr) minmax(0, 1.2fr);
@@ -1834,8 +1944,8 @@
             }
 
             .industrial-base-section {
-                padding-right: 16px;
-                padding-left: 16px;
+                padding-right: 0;
+                padding-left: 0;
             }
 
             .industrial-base-lede {
@@ -1898,6 +2008,130 @@
                 width: min(100%, 320px);
             }
 
+            .timeline-card p {
+                font-size: 0.94rem;
+            }
+
+            .timeline-card ul li {
+                font-size: 0.88rem;
+                line-height: 1.65;
+            }
+
+            .sponsorship-tiers {
+                gap: 16px;
+            }
+
+            .tier-card {
+                padding: 26px 20px;
+            }
+
+            .tier-name,
+            .tier-description {
+                font-size: 0.84rem;
+            }
+
+            .tier-benefits li {
+                font-size: 0.88rem;
+                line-height: 1.5;
+            }
+
+            .tier-cta .btn {
+                min-height: 50px;
+                font-size: 0.82rem;
+            }
+
+            .in-kind-section {
+                padding: 24px 20px;
+            }
+
+            .in-kind-section .in-kind-subtitle,
+            .in-kind-benefits li,
+            .sponsorship-note p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .in-kind-cta,
+            .in-kind-cta .btn {
+                width: 100%;
+            }
+
+            .in-kind-cta .btn {
+                min-height: 52px;
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+
+            .donation-copy {
+                font-size: 0.98rem;
+                line-height: 1.75;
+            }
+
+            .donation-disclosure {
+                margin-bottom: 30px;
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .donation-cta {
+                display: flex;
+            }
+
+            .donation-cta .btn {
+                min-width: 0;
+                min-height: 62px;
+                width: min(100%, 360px);
+                font-size: 0.95rem;
+            }
+
+            .get-involved-content {
+                padding: 32px 20px;
+            }
+
+            .get-involved-title {
+                font-size: 1.8rem;
+            }
+
+            .get-involved-copy {
+                font-size: 0.98rem;
+                line-height: 1.75;
+            }
+
+            .get-involved-cta {
+                gap: 10px;
+            }
+
+            footer {
+                margin-top: 56px;
+            }
+
+            .brought-to-you {
+                margin: 32px auto;
+                padding: 28px 16px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+
+            .footer-links a {
+                min-height: 40px;
+                margin-left: 0;
+                font-size: 0.78rem;
+            }
+
+            .footer-content > div:first-child {
+                font-size: 0.78rem;
+            }
+
             .stat-number {
                 font-size: 2.75rem;
             }
@@ -1911,9 +2145,9 @@
 
         @media (max-width: 380px) {
             .nav-links a {
-                padding-right: 5px;
-                padding-left: 5px;
-                font-size: 0.64rem;
-                letter-spacing: 0.01em;
+                padding-right: 4px;
+                padding-left: 4px;
+                font-size: 0.66rem;
+                letter-spacing: 0;
             }
         }
