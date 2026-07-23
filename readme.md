@@ -1,6 +1,6 @@
-# HackFW October 2026 Website
+# HackFW MADE Challenge Website
 
-Landing page for HackFW October 2026: Rebuilding System Density.
+Landing page for the October 2026 HackFW MADE Challenge: Rebuilding System Density.
 
 The event runs October 1-31, 2026 with an in-person Fort Worth kickoff, a
 month-long virtual industrial-systems incubation, and an in-person closing
