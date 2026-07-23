@@ -5,7 +5,10 @@ import parse, {
 } from "html-react-parser";
 import { useEffect } from "react";
 
-import { HackFwBuilderPipeline } from "@/components/hackfw-builder-pipeline";
+import {
+  HackFwInnovationFlywheel,
+  HackFwOrganizerFusion,
+} from "@/components/hackfw-builder-pipeline";
 import { HeroSpline } from "@/components/hero-spline";
 import { WinningSystemFeatures } from "@/components/winning-system-features";
 import landingMarkup from "@/landing.html?raw";
@@ -28,9 +31,16 @@ const parserOptions: HTMLReactParserOptions = {
 
     if (
       domNode instanceof DomElement &&
-      domNode.attribs.id === "hackfw-builder-pipeline-root"
+      domNode.attribs.id === "hackfw-innovation-flywheel-root"
     ) {
-      return <HackFwBuilderPipeline />;
+      return <HackFwInnovationFlywheel />;
+    }
+
+    if (
+      domNode instanceof DomElement &&
+      domNode.attribs.id === "hackfw-organizer-fusion-root"
+    ) {
+      return <HackFwOrganizerFusion />;
     }
   },
 };

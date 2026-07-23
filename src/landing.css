@@ -561,29 +561,6 @@
             text-transform: uppercase;
         }
 
-        .flywheel-description {
-            font-size: 0.95rem;
-            max-width: 660px;
-            margin: 0 auto;
-            color: var(--text-secondary);
-            line-height: 1.85;
-        }
-
-        .flywheel-image {
-            margin: 28px auto 30px;
-            max-width: 620px;
-        }
-
-        .flywheel-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: var(--radius);
-            outline: 1px solid rgba(255, 255, 255, 0.1);
-            outline-offset: -1px;
-        }
-
         /* ========== CALENDAR PLACEHOLDER ========== */
 
         .calendar-placeholder {
@@ -932,14 +909,6 @@
             font-weight: 700;
             line-height: 1.35;
             letter-spacing: -0.02em;
-        }
-
-        .industrial-base-copy {
-            max-width: 68ch;
-            margin: 24px auto 0;
-            color: var(--text-secondary);
-            font-size: 0.98rem;
-            line-height: 1.75;
         }
 
         .partner-tier {
@@ -1445,10 +1414,6 @@
                 padding: 44px 20px;
             }
 
-            .flywheel-image {
-                margin-top: 24px;
-            }
-
             .made-challenge {
                 gap: 8px;
             }
@@ -1617,11 +1582,6 @@
 
             .industrial-base-lede {
                 font-size: 1.25rem;
-            }
-
-            .industrial-base-copy {
-                font-size: 0.92rem;
-                line-height: 1.7;
             }
 
             .partner-tier {

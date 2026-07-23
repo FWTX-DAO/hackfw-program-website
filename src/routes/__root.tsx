@@ -73,12 +73,6 @@ export const Route = createRootRoute({
       {
         rel: "preload",
         as: "image",
-        href: "/hackfw-flywheel.png",
-        type: "image/png",
-      },
-      {
-        rel: "preload",
-        as: "image",
         href: "/sponsors/made-logo.png",
         type: "image/png",
       },
