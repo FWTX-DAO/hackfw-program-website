@@ -894,3 +894,334 @@
     stroke-dashoffset: -96;
   }
 }
+
+/* The campaign's interactive elements use the same Fort Worth field system. */
+
+#vanta-background {
+  background:
+    linear-gradient(rgb(231 236 229 / 3.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(231 236 229 / 3.5%) 1px, transparent 1px),
+    radial-gradient(circle at 78% 10%, rgb(226 103 61 / 13%), transparent 26%),
+    var(--void);
+  background-size: 80px 80px, 80px 80px, auto, auto;
+}
+
+.hero-spline-card {
+  min-height: 0;
+  border-radius: 0 !important;
+  background: var(--surface) !important;
+}
+
+.hero-spline-card__viewport canvas {
+  outline-color: rgb(231 236 229 / 12%);
+}
+
+.hero-spline-card__grid {
+  background-image:
+    linear-gradient(rgb(231 236 229 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(231 236 229 / 7%) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-spline-card__glow {
+  background:
+    radial-gradient(circle at 62% 44%, rgb(231 236 229 / 8%), transparent 32%),
+    radial-gradient(circle at 36% 64%, rgb(226 103 61 / 20%), transparent 40%);
+}
+
+.hero-spline-card__status {
+  color: var(--amber-bright);
+}
+
+.hero-spline-card__status span {
+  border-radius: 0;
+  background: var(--amber);
+  box-shadow: none;
+}
+
+.hero-spline-card__telemetry {
+  color: var(--text-secondary);
+}
+
+.spline-static__core {
+  border-radius: 0;
+  background:
+    linear-gradient(145deg, rgb(231 236 229 / 10%), transparent 52%),
+    var(--surface-overlay);
+  box-shadow:
+    0 0 0 1px rgb(231 236 229 / 12%),
+    0 0 72px rgb(226 103 61 / 18%);
+}
+
+.spline-static__orbit {
+  border-color: rgb(231 236 229 / 22%);
+}
+
+.spline-static__orbit--two {
+  border-color: rgb(226 103 61 / 28%);
+}
+
+.spline-static__node--amber {
+  background: var(--amber);
+}
+
+.spline-static__node--cyber {
+  background: var(--text);
+  box-shadow: 0 0 24px rgb(231 236 229 / 54%);
+}
+
+.winning-system {
+  --winning-system-hatch: rgb(231 236 229 / 4%);
+}
+
+.winning-system__header,
+.winning-system__card {
+  clip-path: none;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.winning-system__header {
+  background: var(--surface);
+}
+
+.winning-system__header-content {
+  padding: clamp(32px, 5vw, 64px);
+}
+
+.winning-system__header .section-title {
+  max-width: 14ch;
+}
+
+.winning-system__grid {
+  gap: 1px;
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.winning-system__card {
+  min-height: 196px;
+  border: 0;
+  background: var(--surface-raised);
+}
+
+.winning-system__card:hover {
+  background: var(--surface-overlay);
+  box-shadow: inset 0 2px var(--amber);
+  transform: translateY(-2px);
+}
+
+.winning-system__card-content {
+  grid-template-columns: 3px minmax(0, 1fr);
+  gap: 18px;
+  padding: 32px;
+}
+
+.winning-system__accent {
+  width: 3px;
+  border-radius: 0;
+  background: var(--amber);
+  box-shadow: none;
+}
+
+.winning-system__signal-heading > span {
+  color: var(--amber-bright);
+}
+
+.builder-flywheel {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background:
+    linear-gradient(145deg, rgb(226 103 61 / 11%), transparent 38%),
+    var(--surface-raised);
+  box-shadow: none;
+}
+
+.builder-flywheel::before {
+  background-image:
+    linear-gradient(rgb(231 236 229 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(231 236 229 / 4%) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.builder-flywheel__loop-track {
+  stroke: rgb(231 236 229 / 18%);
+}
+
+.builder-flywheel__stage {
+  border-radius: 0;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.builder-flywheel__stage--program {
+  background:
+    radial-gradient(circle, rgb(226 103 61 / 20%), transparent 64%),
+    var(--surface);
+  box-shadow: inset 0 0 0 1px var(--border-amber);
+}
+
+.builder-flywheel__stage--builder {
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.builder-flywheel__stage-mark,
+.builder-flywheel__return-label {
+  border-radius: 0;
+  background: rgb(13 14 13 / 92%);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.builder-flywheel__stage-mark img {
+  filter: none;
+}
+
+.builder-flywheel__return-label span {
+  color: var(--amber-bright);
+}
+
+.merging-bubbles__frame {
+  filter: none;
+}
+
+.merging-bubbles__icon a {
+  border-radius: 0;
+}
+
+@media (max-width: 960px) {
+  .hero-spline-card {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-spline-card {
+    min-height: 340px;
+  }
+
+  .winning-system__header-content {
+    padding: 34px 24px;
+  }
+
+  .winning-system__card-content {
+    padding: 28px 22px;
+  }
+
+  .builder-flywheel {
+    border-radius: 0;
+  }
+}
+
+/* Keep the scene legible without any mouse-driven overlay competing with it. */
+
+.hero-spline-card__viewport {
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+}
+
+.hero-spline-card__viewport canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.hero-spline-card__status {
+  top: auto;
+  bottom: 20px;
+  left: 20px;
+  max-width: calc(100% - 40px);
+  padding: 8px 10px;
+  border: 1px solid rgb(231 236 229 / 16%);
+  background: rgb(13 14 13 / 84%);
+}
+
+.hero-spline-card__telemetry {
+  top: 20px;
+  right: 20px;
+  bottom: auto;
+  padding: 7px 9px;
+  border: 1px solid rgb(231 236 229 / 12%);
+  background: rgb(13 14 13 / 76%);
+}
+
+.merging-bubbles__icon a:hover {
+  background: transparent;
+  transform: none;
+}
+
+.not-found {
+  display: grid;
+  min-height: 100svh;
+  padding: 24px;
+  place-items: center;
+}
+
+.not-found__panel {
+  width: min(100%, 680px);
+  padding: clamp(36px, 8vw, 88px);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--amber);
+  background: var(--surface);
+  text-align: center;
+}
+
+.not-found__status {
+  margin-bottom: 18px;
+  color: var(--amber-bright);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.not-found h1 {
+  max-width: 12ch;
+  margin: 0 auto 20px;
+  color: var(--text);
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  text-wrap: balance;
+}
+
+.not-found__panel > p:not(.not-found__status) {
+  max-width: 48ch;
+  margin: 0 auto 32px;
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.not-found .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .hero-spline-card__status {
+    bottom: 14px;
+    left: 14px;
+    max-width: calc(100% - 28px);
+    padding: 7px 8px;
+    font-size: 0.54rem;
+  }
+
+  .hero-spline-card__telemetry {
+    top: 14px;
+    right: 14px;
+    gap: 8px;
+    padding: 6px 7px;
+  }
+
+  .not-found {
+    padding: 16px;
+  }
+
+  .not-found__panel {
+    padding: 38px 24px;
+  }
+}

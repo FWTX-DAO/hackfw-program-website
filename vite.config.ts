@@ -8,6 +8,13 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [tanstackStart(), react(), tailwindcss(), netlify()],
+  server: {
+    // Keep this app off Vite's shared auto-selected ports so an unrelated
+    // localhost service worker cannot control the HackFW development origin.
+    host: "127.0.0.1",
+    port: 5180,
+    strictPort: true,
+  },
   ssr: {
     // Netlify's function bundler must not externalize this mixed ESM/CJS chain.
     noExternal: [

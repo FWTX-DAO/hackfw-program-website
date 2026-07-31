@@ -10,7 +10,6 @@ import {
 
 import { Card } from "@/components/ui/card";
 import { SplineScene } from "@/components/ui/splite";
-import { Spotlight } from "@/components/ui/spotlight";
 
 const SCENE_URL =
   "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode";
@@ -80,12 +79,6 @@ export function HeroSpline() {
       role="img"
       aria-label="Interactive three-dimensional industrial compute system"
     >
-      <Spotlight
-        className="z-20"
-        size={360}
-        springOptions={{ bounce: 0, duration: 0.3 }}
-      />
-
       <div className="hero-spline-card__grid" aria-hidden="true" />
       <div className="hero-spline-card__glow" aria-hidden="true" />
 

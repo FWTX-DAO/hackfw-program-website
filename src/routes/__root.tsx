@@ -14,7 +14,7 @@ const title =
   "HackFW MADE Challenge - Rebuilding System Density | Fort Worth";
 const description =
   "HackFW is a month-long industrial systems builder program with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE. Locations, times, calendar, and tracks are TBA.";
-const socialImage = "https://cdn.fwtx.city/ogimage.png";
+const socialImage = "https://hack.fwtx.city/og-image";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -38,7 +38,7 @@ export const Route = createRootRoute({
         content:
           "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      { name: "theme-color", content: "#D4931A" },
+      { name: "theme-color", content: "#E2673D" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://hack.fwtx.city" },
       {
@@ -89,6 +89,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: NotFoundComponent,
 });
 
 function RootComponent() {
@@ -96,6 +97,24 @@ function RootComponent() {
     <RootDocument>
       <Outlet />
     </RootDocument>
+  );
+}
+
+function NotFoundComponent() {
+  return (
+    <main className="not-found" aria-labelledby="not-found-title">
+      <div className="not-found__panel">
+        <p className="not-found__status">404 // Route not found</p>
+        <h1 id="not-found-title">This page is outside the build zone.</h1>
+        <p>
+          The requested HackFW page is not available. Return to the program
+          overview to continue exploring the MADE Challenge.
+        </p>
+        <a className="btn btn-primary" href="/">
+          Return to HackFW
+        </a>
+      </div>
+    </main>
   );
 }
 
