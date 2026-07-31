@@ -23,7 +23,7 @@ function getImageText(
 export const Route = createFileRoute("/og-image")({
   server: {
     handlers: {
-      GET: ({ request }) => {
+      GET: async ({ request }) => {
         const url = new URL(request.url);
         const title = getImageText(
           url.searchParams.get("title"),
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/og-image")({
         const titleFontSize = title.length > 28 ? 38 : 68;
         const descriptionFontSize = description.length > 60 ? 18 : 28;
 
-        return new ImageResponse(
+        const response = new ImageResponse(
           <div
             style={{
               width: "100%",
@@ -158,6 +158,10 @@ export const Route = createFileRoute("/og-image")({
             },
           },
         );
+
+        await response.ready;
+
+        return response;
       },
     },
   },
