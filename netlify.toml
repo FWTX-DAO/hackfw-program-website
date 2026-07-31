@@ -4,3 +4,8 @@
 
   [build.environment]
     NODE_VERSION = "22"
+
+[functions]
+  # Takumi discovers this native renderer dynamically, so include the Linux
+  # package explicitly in Netlify's server-function artifact.
+  included_files = ["node_modules/@takumi-rs/core-linux-x64-gnu/**"]
