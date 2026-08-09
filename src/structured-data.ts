@@ -39,6 +39,11 @@ export const structuredData = [
     "sponsor": [
       {
         "@type": "Organization",
+        "name": "MoonShot",
+        "url": "https://moonshotus.com/"
+      },
+      {
+        "@type": "Organization",
         "name": "Y2",
         "url": "https://y2.dev"
       },
