@@ -285,7 +285,7 @@ export function HackFwInnovationFlywheel() {
     <div className="builder-flywheel" data-aos="fade-up">
       <ol
         className="builder-flywheel__cycle"
-        aria-label="Beginner joins HackFW, becomes a Value-Add Builder, and shares knowledge with the next beginner"
+        aria-label="Beginner joins HackFW, becomes a Forward-Deployed Builder, and shares knowledge with the next beginner"
       >
         <FlywheelPaths />
         <FlywheelStage
@@ -314,7 +314,7 @@ export function HackFwInnovationFlywheel() {
         <FlywheelStage
           className="builder-flywheel__stage--builder"
           type="Outcome"
-          title="Value-Add Builder"
+          title="Forward-Deployed Builder"
           description="Ready to create durable systems"
           icon={<BuilderMark />}
         />

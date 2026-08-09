@@ -10,6 +10,8 @@ import {
   HackFwOrganizerFusion,
 } from "@/components/hackfw-builder-pipeline";
 import { HeroSpline } from "@/components/hero-spline";
+import FlipClock from "@/components/ui/flip-clock";
+import MatrixRain from "@/components/ui/matrix-code";
 import { WinningSystemFeatures } from "@/components/winning-system-features";
 import landingMarkup from "@/landing.html?raw";
 
@@ -20,6 +22,29 @@ const parserOptions: HTMLReactParserOptions = {
       domNode.attribs.id === "hero-spline-root"
     ) {
       return <HeroSpline />;
+    }
+
+    if (
+      domNode instanceof DomElement &&
+      domNode.attribs.id === "matrix-rain-root"
+    ) {
+      return (
+        <MatrixRain
+          className="site-matrix-background"
+          color="rgb(226 103 61 / 0.16)"
+          characters="01"
+          fadeOpacity={0.06}
+          fontSize={18}
+          speed={0.2}
+        />
+      );
+    }
+
+    if (
+      domNode instanceof DomElement &&
+      domNode.attribs.id === "kickoff-countdown-root"
+    ) {
+      return <FlipClock targetDate="2026-10-01T00:00:00-05:00" />;
     }
 
     if (

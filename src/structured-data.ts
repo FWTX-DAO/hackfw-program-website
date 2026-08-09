@@ -13,7 +13,7 @@ export const structuredData = [
     "image": "https://cdn.fwtx.city/ogimage.png",
     "url": "https://hack.fwtx.city",
     "startDate": "2026-10-01",
-    "endDate": "2026-10-31",
+    "endDate": "2026-10-29",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
     "location": [
