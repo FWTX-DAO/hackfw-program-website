@@ -15,6 +15,9 @@ import MatrixRain from "@/components/ui/matrix-code";
 import { WinningSystemFeatures } from "@/components/winning-system-features";
 import landingMarkup from "@/landing.html?raw";
 
+const LUMA_CHECKOUT_SCRIPT_ID = "luma-checkout";
+const LUMA_CHECKOUT_SCRIPT_SRC = "https://embed.lu.ma/checkout-button.js";
+
 const parserOptions: HTMLReactParserOptions = {
   replace(domNode) {
     if (
@@ -75,6 +78,16 @@ export const Route = createFileRoute("/")({
 });
 
 function HackFwLandingPage() {
+  useEffect(() => {
+    if (document.getElementById(LUMA_CHECKOUT_SCRIPT_ID)) return;
+
+    const script = document.createElement("script");
+    script.id = LUMA_CHECKOUT_SCRIPT_ID;
+    script.src = LUMA_CHECKOUT_SCRIPT_SRC;
+    script.async = true;
+    document.body.append(script);
+  }, []);
+
   useEffect(() => {
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",

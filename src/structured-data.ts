@@ -13,7 +13,7 @@ export const structuredData = [
     "image": "https://cdn.fwtx.city/ogimage.png",
     "url": "https://hack.fwtx.city",
     "startDate": "2026-10-01",
-    "endDate": "2026-10-29",
+    "endDate": "2026-10-30",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
     "location": [
@@ -41,6 +41,11 @@ export const structuredData = [
         "@type": "Organization",
         "name": "MoonShot",
         "url": "https://moonshotus.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "BNSF Railway",
+        "url": "https://www.bnsf.com/"
       },
       {
         "@type": "Organization",
