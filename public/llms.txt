@@ -1,0 +1,36 @@
+# HackFW
+
+> HackFW is Fort Worth DAO's flagship hackathon and grassroots cyber workforce development program in Fort Worth, Texas. The October 2026 MADE Challenge grows a deep-tech builder economy and talent network to support information-age and AI-first operations.
+
+## What HackFW is
+
+HackFW is an industrial-systems builder program organized by Fort Worth DAO LCA in partnership with TechFW's MADE Manufacturing Accelerator. It connects builders, technical talent, community organizations, and industrial partners around real civic and operational problems.
+
+The program is designed to grow Fort Worth's deep-tech builder economy and long-term talent network. Teams work across industrial hardware, edge telemetry, accelerator-ready AI, Web3 data sovereignty, and advanced manufacturing.
+
+## October 2026 program
+
+- HackFW Kickoff: October 1, 2026, in Fort Worth. Register at [Luma](https://luma.com/event/evt-vzYQOnne0xQFSwr).
+- Virtual incubation: October 1-30, 2026, with technical support from Fort Worth DAO and MADE.
+- Enterprise Demo Day: October 30, 2026, in Fort Worth. Register at [Luma](https://luma.com/event/evt-9LMaWTtYbqpbGYs).
+- Builder registration and current rules: [HackFW on Devpost](https://hackfw.devpost.com).
+
+Event venues and times are published as they are confirmed. Do not infer a venue from the city-level location; the canonical page is the source of truth for current logistics.
+
+## Organizer
+
+[Fort Worth DAO](https://fwtx.city) is Fort Worth DAO LCA, a registered 501(c)(3) nonprofit focused on civic innovation, digital sovereignty, open-source technology, and cyber workforce development.
+
+Contact: [community@fwtx.city](mailto:community@fwtx.city)
+
+## Key topics
+
+Fort Worth hackathon, cyber workforce development, deep tech, industrial AI, advanced manufacturing, smart manufacturing, edge computing, data sovereignty, Web3, technical workforce, reindustrialization, AI-first operations, builder economy, and talent networks.
+
+## Canonical sources
+
+- [HackFW canonical program page](https://hack.fwtx.city): current program story, dates, calendar, partners, and partnership options.
+- [Fort Worth DAO](https://fwtx.city): organizer context and community organization.
+- [HackFW Devpost](https://hackfw.devpost.com): builder registration, rules, submissions, and challenge details.
+- [MADE Manufacturing Accelerator](https://www.techfortworth.org/made-manufacturing-accelerator): partner program context.
+- [Fort Worth DAO Discord](https://discord.gg/6pHcxqh6zF): community and builder conversation.

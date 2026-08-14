@@ -13,7 +13,7 @@ import "@/app.css";
 const title =
   "HackFW MADE Challenge - Rebuilding System Density | Fort Worth";
 const description =
-  "HackFW is a month-long industrial systems builder program with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE. Locations, times, calendar, and tracks are TBA.";
+  "HackFW is Fort Worth DAO's flagship hackathon and grassroots cyber workforce development program, growing a deep-tech builder economy and talent network for AI-first operations.";
 const socialImage = "https://hack.fwtx.city/og-image";
 
 export const Route = createRootRoute({
@@ -30,9 +30,11 @@ export const Route = createRootRoute({
       {
         name: "keywords",
         content:
-          "HackFW, MADE Challenge, TechFW MADE, Fort Worth hackathon, industrial systems, advanced manufacturing, technical workforce, virtual incubation",
+          "HackFW, MADE Challenge, Fort Worth hackathon, Fort Worth DAO, cyber workforce development, deep tech, builder economy, talent network, AI-first operations, industrial AI, advanced manufacturing, virtual incubation",
       },
       { name: "author", content: "Fort Worth DAO LCA" },
+      { name: "geo.region", content: "US-TX" },
+      { name: "geo.placename", content: "Fort Worth, Texas" },
       {
         name: "robots",
         content:
@@ -49,6 +51,8 @@ export const Route = createRootRoute({
       { property: "og:image", content: socialImage },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "HackFW MADE Challenge in Fort Worth" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:site_name", content: "HackFW" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -57,6 +61,8 @@ export const Route = createRootRoute({
       },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: socialImage },
+      { name: "twitter:image:alt", content: "HackFW MADE Challenge in Fort Worth" },
+      { name: "twitter:site", content: "@fwtxdao" },
       { name: "twitter:creator", content: "@fwtxdao" },
     ],
     links: [

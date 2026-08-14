@@ -19,3 +19,6 @@ Crawl-delay: 5
 
 # Sitemap
 Sitemap: https://hack.fwtx.city/sitemap.xml
+
+# AI-readable site summary (the page remains crawlable under User-agent: *)
+# https://hack.fwtx.city/llms.txt

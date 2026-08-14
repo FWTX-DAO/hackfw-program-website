@@ -9,7 +9,7 @@ export const structuredData = [
       "HackFW October 2026",
       "MADE Challenge"
     ],
-    "description": "A month-long industrial systems builder program with opening and closing gatherings in Fort Worth plus virtual incubation and technical support from Fort Worth DAO and MADE. Fort Worth locations, times, program calendar, and industrial tracks are to be announced.",
+    "description": "Fort Worth DAO's flagship HackFW hackathon and grassroots cyber workforce development program. The October 2026 MADE Challenge grows a deep-tech builder economy and talent network for AI-first operations through industrial systems building, virtual incubation, and Fort Worth gatherings.",
     "image": "https://cdn.fwtx.city/ogimage.png",
     "url": "https://hack.fwtx.city",
     "startDate": "2026-10-01",
@@ -108,7 +108,12 @@ export const structuredData = [
       "edge computing",
       "industrial systems",
       "technical workforce",
-      "reindustrialization"
+      "reindustrialization",
+      "cyber workforce development",
+      "deep tech",
+      "builder economy",
+      "talent network",
+      "AI-first operations"
     ]
   },
   {
@@ -123,7 +128,7 @@ export const structuredData = [
     "url": "https://fwtx.city",
     "logo": "https://cdn.fwtx.city/logo.svg",
     "image": "https://cdn.fwtx.city/ogimage.png",
-    "description": "Fort Worth DAO LCA is a 501(c)(3) nonprofit organization dedicated to civic innovation, digital sovereignty, and technical workforce development in Fort Worth, Texas. Building the builder ecosystem through open-source technology and community-driven innovation.",
+    "description": "Fort Worth DAO LCA is a 501(c)(3) nonprofit organization running HackFW as a grassroots cyber workforce development program and flagship Fort Worth hackathon. It grows a deep-tech builder economy and talent network for information-age and AI-first operations through open-source technology and community-driven innovation.",
     "nonprofitStatus": "Nonprofit501c3",
     "areaServed": {
       "@type": "City",
@@ -157,7 +162,12 @@ export const structuredData = [
       "Web3",
       "Digital Sovereignty",
       "Open Source",
-      "STEM Education"
+      "STEM Education",
+      "Deep Tech",
+      "Industrial AI",
+      "AI-first Operations",
+      "Builder Economy",
+      "Talent Networks"
     ]
   },
   {
@@ -165,7 +175,7 @@ export const structuredData = [
     "@type": "EducationalOccupationalProgram",
     "@id": "https://hack.fwtx.city/#program",
     "name": "HackFW MADE Challenge",
-    "description": "A hands-on industrial workforce and builder program with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE.",
+    "description": "A hands-on industrial workforce and builder program run by Fort Worth DAO with Fort Worth gatherings, virtual incubation, and technical support from Fort Worth DAO and MADE. The program builds a deep-tech talent network for AI-first operations.",
     "url": "https://hack.fwtx.city",
     "provider": {
       "@type": "Organization",
@@ -209,18 +219,43 @@ export const structuredData = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://hack.fwtx.city/#webpage",
+    "url": "https://hack.fwtx.city",
+    "name": "HackFW MADE Challenge - Rebuilding System Density | Fort Worth",
+    "description": "Fort Worth DAO's flagship HackFW hackathon and grassroots cyber workforce development program for a deep-tech builder economy and AI-first talent network.",
+    "isPartOf": {
+      "@id": "https://hack.fwtx.city/#website"
+    },
+    "about": {
+      "@id": "https://hack.fwtx.city/#hackathon"
+    },
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "Fort Worth, Texas, United States"
+    },
+    "inLanguage": "en",
+    "dateModified": "2026-08-14"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://hack.fwtx.city/#website",
     "name": "HackFW",
     "alternateName": [
       "HackFW October 2026",
       "HackFW MADE Challenge"
     ],
     "url": "https://hack.fwtx.city",
-    "description": "Fort Worth's month-long industrial systems builder program and partner network",
+    "description": "Fort Worth DAO's flagship hackathon and grassroots cyber workforce development program, growing a deep-tech builder economy and talent network for AI-first operations.",
     "publisher": {
       "@type": "Organization",
       "@id": "https://hack.fwtx.city/#organization"
     },
-    "inLanguage": "en"
+    "inLanguage": "en",
+    "sameAs": [
+      "https://hackfw.devpost.com",
+      "https://discord.gg/6pHcxqh6zF"
+    ]
   }
 ] as const;
