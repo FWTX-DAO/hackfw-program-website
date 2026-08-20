@@ -91,7 +91,7 @@
 
         /* ========== HEADER ========== */
 
-        header {
+        header[role="banner"] {
             padding: 14px 0;
             background: rgba(7, 7, 12, 0.88);
             backdrop-filter: blur(24px);
@@ -103,7 +103,7 @@
         }
 
         /* Amber horizon line beneath header */
-        header::after {
+        header[role="banner"]::after {
             content: '';
             position: absolute;
             bottom: -1px;
@@ -1520,7 +1520,7 @@
                 padding: 48px 0;
             }
 
-            header {
+            header[role="banner"] {
                 padding: 10px 0 8px;
             }
 
@@ -1881,14 +1881,14 @@
             padding-inline: clamp(20px, 4vw, 52px);
         }
 
-        header {
+        header[role="banner"] {
             padding: 12px 0;
             background: rgba(13, 14, 13, 0.92);
             border-bottom-color: var(--border);
             box-shadow: none;
         }
 
-        header::after {
+        header[role="banner"]::after {
             inset-inline: clamp(20px, 4vw, 52px);
             width: auto;
             background: var(--amber);
@@ -2479,7 +2479,7 @@
                 padding-inline: 20px;
             }
 
-            header::after {
+            header[role="banner"]::after {
                 inset-inline: 20px;
             }
 
