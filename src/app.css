@@ -884,6 +884,18 @@
 
 .problem-tracks__header {
   margin-bottom: 36px;
+  /* Avoid inheriting the site nav's sticky overlay if this is ever a <header>. */
+  position: static;
+  z-index: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.problem-tracks__header::after {
+  content: none;
 }
 
 .problem-tracks__header h2 {
@@ -1026,11 +1038,24 @@
 }
 
 .problem-tracks__gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
   min-width: 0;
+}
+
+@media (min-width: 901px) {
+  .problem-tracks__gallery {
+    position: sticky;
+    top: 5.75rem;
+  }
 }
 
 .problem-tracks__image-wrap {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 11;
   overflow: hidden;
   border-radius: 1.75rem;
@@ -1054,6 +1079,7 @@
 .problem-tracks__image {
   display: block;
   object-fit: cover;
+  object-position: center;
   outline: 1px solid rgb(255 255 255 / 0.1);
   outline-offset: -1px;
   filter: saturate(0.82) contrast(1.04);
@@ -1107,6 +1133,10 @@
 @media (max-width: 900px) {
   .problem-tracks__layout {
     grid-template-columns: 1fr;
+  }
+
+  .problem-tracks__gallery {
+    align-self: stretch;
   }
 
   .problem-tracks__header h2 {

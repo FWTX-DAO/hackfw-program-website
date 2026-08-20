@@ -195,10 +195,10 @@ export default function VerticalTabs() {
     >
       <div className="problem-tracks__layout">
         <div className="problem-tracks__content">
-          <header className="problem-tracks__header">
+          <div className="problem-tracks__header">
             <h2 id="problem-tracks-title">Pick a system to move</h2>
             <span className="problem-tracks__kicker">(PROBLEM TRACKS)</span>
-          </header>
+          </div>
 
           <div
             className="problem-tracks__tabs"
