@@ -12,6 +12,7 @@ import {
 import { HeroSpline } from "@/components/hero-spline";
 import FlipClock from "@/components/ui/flip-clock";
 import MatrixRain from "@/components/ui/matrix-code";
+import VerticalTabs from "@/components/ui/vertical-tabs";
 import { WinningSystemFeatures } from "@/components/winning-system-features";
 import landingMarkup from "@/landing.html?raw";
 
@@ -55,6 +56,13 @@ const parserOptions: HTMLReactParserOptions = {
       domNode.attribs.id === "winning-system-root"
     ) {
       return <WinningSystemFeatures />;
+    }
+
+    if (
+      domNode instanceof DomElement &&
+      domNode.attribs.id === "problem-tracks-root"
+    ) {
+      return <VerticalTabs />;
     }
 
     if (

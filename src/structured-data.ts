@@ -113,7 +113,13 @@ export const structuredData = [
       "deep tech",
       "builder economy",
       "talent network",
-      "AI-first operations"
+      "AI-first operations",
+      "AI for manufacturing",
+      "supply chain provenance",
+      "CMMC 2.0",
+      "stablecoin payments",
+      "vendor automation",
+      "AI for transportation"
     ]
   },
   {
