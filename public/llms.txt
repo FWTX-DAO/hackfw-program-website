@@ -23,9 +23,18 @@ Event venues and times are published as they are confirmed. Do not infer a venue
 
 Contact: [community@fwtx.city](mailto:community@fwtx.city)
 
+## Problem tracks
+
+Four open briefs. Solutions stay open-ended. Register and submit on [HackFW Devpost](https://hackfw.devpost.com).
+
+1. **AI for Manufacturing** — agents, edge telemetry, maintenance, automation, ERP/MES, measurable process gains.
+2. **Supply Chain Provenance / SRM** — knowledge graphs, systems of record, graph-RAG, CMMC 2.0 evidence that a team can keep current.
+3. **Stablecoin Payments & Vendor Ops** — time to payment, settlement, approvals, vendor workflows, working-capital velocity.
+4. **AI for Transportation** — inspection at network scale, predictive maintenance, yard and switch planning, load optimization, dwell, human-in-the-loop safety. Informed by BNSF's published innovation work.
+
 ## Key topics
 
-Fort Worth hackathon, cyber workforce development, deep tech, industrial AI, advanced manufacturing, smart manufacturing, edge computing, data sovereignty, Web3, technical workforce, reindustrialization, AI-first operations, builder economy, and talent networks.
+Fort Worth hackathon, cyber workforce development, deep tech, industrial AI, advanced manufacturing, smart manufacturing, edge computing, data sovereignty, Web3, technical workforce, reindustrialization, AI-first operations, builder economy, talent networks, CMMC 2.0, stablecoin payments, and freight AI.
 
 ## Canonical sources
 
