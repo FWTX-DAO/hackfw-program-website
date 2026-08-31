@@ -27,7 +27,7 @@ Contact: [community@fwtx.city](mailto:community@fwtx.city)
 
 Four tracks. Three industrial surfaces, plus an open forum for ideas that aren't already in focus. Pick one. Submit on [HackFW Devpost](https://hackfw.devpost.com).
 
-1. **AI for Manufacturing** — computer vision and robotics on the plant floor: overhead/station cameras for tracking, spotting, and monitoring (self-checkout-style coverage of a production line); in-process quality; safe robot and drone VSLAM with a human in the loop.
+1. **AI for Manufacturing** — computer vision, robotics, and CAD-to-production on the plant floor: overhead/station cameras for tracking, spotting, and monitoring (self-checkout-style coverage of a production line); in-process quality; safe robot and drone VSLAM with a human in the loop; generative CAD that a shop can actually make; CAD-to-production and station-level work instructions.
 2. **Supplier Relationship Management** — knowledge graphs of suppliers, parts, certifications, and live order state; API-first MES/ERP (or an adapter) sharing production and order-line expectations upstream and downstream; vendor ops plus modern payment rails, including stablecoins where they shorten time-to-pay.
 3. **AI for Transportation** — computer vision for track and railroad maintenance: geometry, fastener, and surface inspection; defect detection that flags, localizes, and ranks work; predictive maintenance into a crew-ready work order; humans stay in the loop.
 4. **Open Forum** — ideas and solutions at the intersection of technology, manufacturing, and AI that the other tracks don't cover. Ship a working system someone could actually run, not a restatement of the three named tracks.
@@ -46,7 +46,7 @@ Build for other people: readable, maintainable, deployable, end-to-end. Think li
 
 ## Key topics
 
-Fort Worth hackathon, cyber workforce development, deep tech, industrial AI, advanced manufacturing, smart manufacturing, edge computing, computer vision, VSLAM, robotics, supplier relationship management, knowledge graphs, MES/ERP, stablecoin payments, vendor operations, railroad maintenance, open forum, creative industrial AI, data sovereignty, Web3, technical workforce, reindustrialization, AI-first operations, builder economy, and talent networks.
+Fort Worth hackathon, cyber workforce development, deep tech, industrial AI, advanced manufacturing, smart manufacturing, edge computing, computer vision, VSLAM, robotics, generative CAD, CAD to production, work instructions, supplier relationship management, knowledge graphs, MES/ERP, stablecoin payments, vendor operations, railroad maintenance, open forum, creative industrial AI, data sovereignty, Web3, technical workforce, reindustrialization, AI-first operations, builder economy, and talent networks.
 
 ## Canonical sources
 
