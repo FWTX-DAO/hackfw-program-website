@@ -2004,7 +2004,8 @@
         .winning-system__kicker,
         .industrial-base-kicker,
         .calendar-placeholder__kicker,
-        .problem-tracks__kicker {
+        .problem-tracks__kicker,
+        .problem-tracks__submit-kicker {
             color: var(--amber-bright);
             font-size: 0.69rem;
             letter-spacing: 0.18em;

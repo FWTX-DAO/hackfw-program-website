@@ -7,7 +7,6 @@ import {
 } from "framer-motion";
 import {
   useCallback,
-  useEffect,
   useId,
   useRef,
   useState,
@@ -17,44 +16,84 @@ import {
 import { cn } from "@/lib/utils";
 
 const DEVPOST_URL = "https://hackfw.devpost.com";
-const AUTO_PLAY_DURATION = 5_000;
+const TALENT_URL = "https://talent.fwtx.city";
+const DEMO_DAY_URL = "https://luma.com/ygyxb4yy";
 
 const PROBLEM_TRACKS = [
   {
     id: "01",
     title: "AI for Manufacturing",
-    description:
-      "Instrument a real process. Agents, edge telemetry, maintenance, automation, and ERP/MES links are all fair game — as long as the gain is measurable.",
+    summary:
+      "Computer vision and robotics on the plant floor. Treat the line the way a grocery store treats self-checkout: overhead cameras watching every station, catching missing parts, defects, unsafe motion, and stalled work before they become scrap.",
+    useCases: [
+      "Overhead and station cameras for tracking, spotting, and monitoring parts, tools, and people on the line",
+      "In-process quality: wrong assembly, missing fasteners, surface defects, cycle-time stalls",
+      "Safe robot and drone VSLAM through a live factory — localize, map occupancy, move without colliding, keep a human in the loop",
+    ],
+    stack:
+      "OpenCV or YOLO · ROS 2 · NVIDIA Isaac Visual SLAM / Nvblox · Jetson at the cell · MQTT or OPC-UA into MES/ERP",
     image:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1400&auto=format&fit=crop",
     alt: "Welder fabricating metal in an industrial shop",
   },
   {
     id: "02",
-    title: "Supply Chain Provenance / SRM",
-    description:
-      "Keep supplier relationships visible, verifiable, and current. Graphs, systems of record, and graph-RAG can turn CMMC 2.0 evidence into something a team can maintain.",
+    title: "Supplier Relationship Management",
+    summary:
+      "Make the supplier graph, the order line, and the payment the same living system. Knowledge graphs keep relationships current. An API-first MES/ERP — or a clean adapter — publishes production and order status upstream and downstream. Modern payment rails, including stablecoins where they shorten time-to-pay, close vendor ops.",
+    useCases: [
+      "A knowledge graph of suppliers, parts, certifications, and live order state",
+      "API-first MES/ERP, or an adapter, sharing production and order-line expectations with customers and suppliers",
+      "Vendor ops and settlement: approvals, reconciliation, and working-capital velocity — including stablecoin rails where they beat correspondent-bank delay",
+    ],
+    stack:
+      "Neo4j, RDF, or typed Postgres · REST/OpenAPI into the MES/ERP you have · Circle, Stripe, or USDC with an audit trail · a buyer workflow that replaces the spreadsheet",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop",
     alt: "Warehouse shelves and logistics inventory",
   },
   {
     id: "03",
-    title: "Stablecoin Payments & Vendor Ops",
-    description:
-      "Shorten the time between approved work and a paid supplier. Settlement, approvals, and vendor workflows that improve time to payment keep working capital moving.",
-    image:
-      "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1400&auto=format&fit=crop",
-    alt: "Person reviewing payment and financial data",
-  },
-  {
-    id: "04",
     title: "AI for Transportation",
-    description:
-      "Move freight with fewer surprises. BNSF's public problem set is inspection at network scale, predictive maintenance, yard and switch planning, load optimization, and dwell — with people still in the loop.",
+    summary:
+      "Computer vision for track and railroad maintenance. Inspect at network scale, rank the work, and keep people in the loop.",
+    useCases: [
+      "Track geometry, fastener, and surface inspection from locomotive, wayside, or drone cameras",
+      "Defect detection that flags, localizes, and ranks work before it becomes a slow-order or a failure",
+      "Predictive maintenance that turns vision plus sensor history into a crew-ready work order",
+    ],
+    stack:
+      "YOLO or a vision transformer on an edge GPU · GPS + IMU onto the milepost · a defect map the maintenance desk already uses · human review before any railroad action",
     image:
       "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1400&auto=format&fit=crop",
     alt: "Freight train moving through an industrial landscape",
+  },
+] as const;
+
+const SUBMISSION_RULES = [
+  {
+    title: "Problem track",
+    body: "Name which of the three tracks you submitted toward: AI for Manufacturing, Supplier Relationship Management, or AI for Transportation.",
+  },
+  {
+    title: "GitHub link",
+    body: "Include a public repository for the working solution.",
+  },
+  {
+    title: "Video demo",
+    body: "Include a brief recording of the system running end to end.",
+  },
+  {
+    title: "Talent registration",
+    body: "Confirm every participant is registered in the Fort Worth DAO Talent Database at",
+    href: TALENT_URL,
+    hrefLabel: "talent.fwtx.city",
+  },
+  {
+    title: "In-person Demo Day",
+    body: "Every team must attend Demo Day in person for judging:",
+    href: DEMO_DAY_URL,
+    hrefLabel: "luma.com/ygyxb4yy",
   },
 ] as const;
 
@@ -114,7 +153,6 @@ function ChevronRightIcon() {
 export default function VerticalTabs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [isPaused, setIsPaused] = useState(false);
   const reduceMotion = useReducedMotion();
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const baseId = useId();
@@ -166,13 +204,6 @@ export default function VerticalTabs() {
     activate(nextIndex, nextIndex > activeIndex ? 1 : -1, { focus: true });
   };
 
-  useEffect(() => {
-    if (isPaused || reduceMotion) return;
-
-    const interval = window.setInterval(handleNext, AUTO_PLAY_DURATION);
-    return () => window.clearInterval(interval);
-  }, [handleNext, isPaused, reduceMotion]);
-
   const activeTrack = PROBLEM_TRACKS[activeIndex] ?? PROBLEM_TRACKS[0];
   const imageTransition = {
     y: { type: "spring" as const, stiffness: 260, damping: 32 },
@@ -182,22 +213,20 @@ export default function VerticalTabs() {
   return (
     <section
       className="problem-tracks"
+      id="problem-tracks"
       aria-labelledby="problem-tracks-title"
       data-aos="fade-up"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocusCapture={() => setIsPaused(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) {
-          setIsPaused(false);
-        }
-      }}
     >
       <div className="problem-tracks__layout">
         <div className="problem-tracks__content">
           <div className="problem-tracks__header">
             <h2 id="problem-tracks-title">Pick a system to move</h2>
             <span className="problem-tracks__kicker">(PROBLEM TRACKS)</span>
+            <p className="problem-tracks__lede">
+              Three industrial surfaces. Pick one. Ship a system a plant, a
+              supplier desk, or a railroad could actually run. Stacks below are
+              starting points, not a mandate.
+            </p>
           </div>
 
           <div
@@ -221,19 +250,7 @@ export default function VerticalTabs() {
                 >
                   <span className="problem-tracks__progress" aria-hidden="true">
                     {isActive && (
-                      <motion.span
-                        key={`progress-${track.id}-${isPaused}-${reduceMotion}`}
-                        className="problem-tracks__progress-fill"
-                        initial={{ height: "0%" }}
-                        animate={{
-                          height:
-                            isPaused || reduceMotion ? "0%" : "100%",
-                        }}
-                        transition={{
-                          duration: AUTO_PLAY_DURATION / 1000,
-                          ease: "linear",
-                        }}
-                      />
+                      <span className="problem-tracks__progress-fill" />
                     )}
                   </span>
                   <button
@@ -275,7 +292,19 @@ export default function VerticalTabs() {
                           ease: [0.23, 1, 0.32, 1],
                         }}
                       >
-                        <p>{track.description}</p>
+                        <p className="problem-tracks__summary">
+                          {track.summary}
+                        </p>
+                        <p className="problem-tracks__label">Where to aim</p>
+                        <ul className="problem-tracks__list">
+                          {track.useCases.map((useCase) => (
+                            <li key={useCase}>{useCase}</li>
+                          ))}
+                        </ul>
+                        <p className="problem-tracks__label">
+                          Recommended stack
+                        </p>
+                        <p className="problem-tracks__stack">{track.stack}</p>
                         <a
                           href={DEVPOST_URL}
                           target="_blank"
@@ -354,6 +383,73 @@ export default function VerticalTabs() {
               </motion.button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        className="problem-tracks__submit"
+        id="how-to-submit"
+        aria-labelledby="how-to-submit-title"
+      >
+        <div className="problem-tracks__submit-main">
+          <p className="problem-tracks__submit-kicker">
+            Devpost requirements
+          </p>
+          <h3 id="how-to-submit-title">How to submit</h3>
+          <p>
+            Submit on{" "}
+            <a
+              href={DEVPOST_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              hackfw.devpost.com
+            </a>
+            . Copy these five items into your submission — they are judged as a
+            set.
+          </p>
+          <ol className="problem-tracks__rules">
+            {SUBMISSION_RULES.map((rule) => (
+              <li key={rule.title}>
+                <span>
+                  <strong>{rule.title}.</strong> {rule.body}
+                  {"href" in rule && rule.href ? (
+                    <>
+                      {" "}
+                      <a
+                        href={rule.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {rule.hrefLabel}
+                      </a>
+                      .
+                    </>
+                  ) : null}
+                </span>
+              </li>
+            ))}
+          </ol>
+          <a
+            className="btn btn-primary problem-tracks__submit-cta"
+            href={DEVPOST_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Submit on Devpost
+          </a>
+        </div>
+        <div className="problem-tracks__submit-note">
+          <p className="problem-tracks__submit-kicker">Build standard</p>
+          <h3>Ship it like a product</h3>
+          <p>
+            Mind the ergonomics of your code. Teammates, judges, and a plant
+            engineer should be able to clone, run, and maintain it. Prefer a
+            thin end-to-end path — capture, decide, act — over a pile of
+            notebooks. README, environment, and a demo that boots. Think like a
+            bootstrapped startup taking a pilot to a floor, not a weekend
+            prototype that dies on a laptop.
+          </p>
         </div>
       </div>
     </section>
