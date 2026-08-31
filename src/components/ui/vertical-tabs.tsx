@@ -30,8 +30,6 @@ const PROBLEM_TRACKS = [
       "In-process quality: wrong assembly, missing fasteners, surface defects, cycle-time stalls",
       "Safe robot and drone VSLAM through a live factory — localize, map occupancy, move without colliding, keep a human in the loop",
     ],
-    stack:
-      "OpenCV or YOLO · ROS 2 · NVIDIA Isaac Visual SLAM / Nvblox · Jetson at the cell · MQTT or OPC-UA into MES/ERP",
     image:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1400&auto=format&fit=crop",
     alt: "Welder fabricating metal in an industrial shop",
@@ -46,8 +44,6 @@ const PROBLEM_TRACKS = [
       "API-first MES/ERP, or an adapter, sharing production and order-line expectations with customers and suppliers",
       "Vendor ops and settlement: approvals, reconciliation, and working-capital velocity — including stablecoin rails where they beat correspondent-bank delay",
     ],
-    stack:
-      "Neo4j, RDF, or typed Postgres · REST/OpenAPI into the MES/ERP you have · Circle, Stripe, or USDC with an audit trail · a buyer workflow that replaces the spreadsheet",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop",
     alt: "Warehouse shelves and logistics inventory",
@@ -62,18 +58,30 @@ const PROBLEM_TRACKS = [
       "Defect detection that flags, localizes, and ranks work before it becomes a slow-order or a failure",
       "Predictive maintenance that turns vision plus sensor history into a crew-ready work order",
     ],
-    stack:
-      "YOLO or a vision transformer on an edge GPU · GPS + IMU onto the milepost · a defect map the maintenance desk already uses · human review before any railroad action",
     image:
       "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1400&auto=format&fit=crop",
     alt: "Freight train moving through an industrial landscape",
+  },
+  {
+    id: "04",
+    title: "Open Forum",
+    summary:
+      "Bring ideas and solutions that aren't already in the brief. This is the lane for work at the intersection of technology, manufacturing, and AI that the other tracks don't cover — problems nobody is focusing on yet, shipped as a system someone could actually run.",
+    useCases: [
+      "An overlooked industrial or civic problem at the intersection of technology, manufacturing, and AI",
+      "A working prototype a plant, a crew, or a city could try — not a restatement of the three named tracks",
+      "A clear operator: who runs this after Demo Day, and why it isn't already standard practice",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=1400&auto=format&fit=crop",
+    alt: "Hand using an industrial machine interface to inspect a part",
   },
 ] as const;
 
 const SUBMISSION_RULES = [
   {
     title: "Problem track",
-    body: "Name which of the three tracks you submitted toward: AI for Manufacturing, Supplier Relationship Management, or AI for Transportation.",
+    body: "Name which of the four tracks you submitted toward: AI for Manufacturing, Supplier Relationship Management, AI for Transportation, or Open Forum.",
   },
   {
     title: "GitHub link",
@@ -223,9 +231,9 @@ export default function VerticalTabs() {
             <h2 id="problem-tracks-title">Pick a system to move</h2>
             <span className="problem-tracks__kicker">(PROBLEM TRACKS)</span>
             <p className="problem-tracks__lede">
-              Three industrial surfaces. Pick one. Ship a system a plant, a
-              supplier desk, or a railroad could actually run. Stacks below are
-              starting points, not a mandate.
+              Four tracks. Three industrial surfaces, plus an open forum for
+              ideas that aren't already in focus. Pick one. Ship a system
+              someone could actually run.
             </p>
           </div>
 
@@ -301,10 +309,6 @@ export default function VerticalTabs() {
                             <li key={useCase}>{useCase}</li>
                           ))}
                         </ul>
-                        <p className="problem-tracks__label">
-                          Recommended stack
-                        </p>
-                        <p className="problem-tracks__stack">{track.stack}</p>
                         <a
                           href={DEVPOST_URL}
                           target="_blank"
