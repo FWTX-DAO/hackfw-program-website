@@ -125,7 +125,9 @@ export const structuredData = [
       "stablecoin payments",
       "vendor operations",
       "AI for transportation",
-      "railroad maintenance"
+      "railroad maintenance",
+      "open forum",
+      "creative industrial AI"
     ]
   },
   {

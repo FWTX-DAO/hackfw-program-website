@@ -1019,8 +1019,7 @@
   padding: 10px 0 2px 30px;
 }
 
-.problem-tracks__summary,
-.problem-tracks__stack {
+.problem-tracks__summary {
   max-width: 46ch;
   margin: 0;
   color: var(--text-secondary);
@@ -1067,11 +1066,6 @@
   width: 6px;
   height: 1px;
   background: var(--amber);
-}
-
-.problem-tracks__stack {
-  font-size: 0.86rem;
-  line-height: 1.62;
 }
 
 .problem-tracks__copy a {
