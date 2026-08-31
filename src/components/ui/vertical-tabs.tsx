@@ -24,11 +24,13 @@ const PROBLEM_TRACKS = [
     id: "01",
     title: "AI for Manufacturing",
     summary:
-      "Computer vision and robotics on the plant floor. Treat the line the way a grocery store treats self-checkout: overhead cameras watching every station, catching missing parts, defects, unsafe motion, and stalled work before they become scrap.",
+      "Computer vision, robotics, and CAD-to-production on the plant floor. Treat the line the way a grocery store treats self-checkout: overhead cameras watching every station, catching missing parts, defects, unsafe motion, and stalled work before they become scrap. Close the loop from generative CAD to the floor: models a shop can actually make, and work instructions a crew can run.",
     useCases: [
       "Overhead and station cameras for tracking, spotting, and monitoring parts, tools, and people on the line",
       "In-process quality: wrong assembly, missing fasteners, surface defects, cycle-time stalls",
       "Safe robot and drone VSLAM through a live factory — localize, map occupancy, move without colliding, keep a human in the loop",
+      "Generative CAD: propose and iterate parts a shop can actually cut, print, or machine — manufacturable geometry, not render-only form",
+      "CAD to production and work instructions: turn a released model into travelers, setups, toolpaths, and station-level instructions the floor can follow",
     ],
     image:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1400&auto=format&fit=crop",
