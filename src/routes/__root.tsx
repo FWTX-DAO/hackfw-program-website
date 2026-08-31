@@ -30,7 +30,7 @@ export const Route = createRootRoute({
       {
         name: "keywords",
         content:
-          "HackFW, MADE Challenge, Fort Worth hackathon, Fort Worth DAO, cyber workforce development, deep tech, builder economy, talent network, AI-first operations, industrial AI, advanced manufacturing, virtual incubation",
+          "HackFW, MADE Challenge, Fort Worth hackathon, Fort Worth DAO, cyber workforce development, deep tech, builder economy, talent network, AI-first operations, industrial AI, advanced manufacturing, computer vision, supplier relationship management, railroad maintenance, virtual incubation",
       },
       { name: "author", content: "Fort Worth DAO LCA" },
       { name: "geo.region", content: "US-TX" },

@@ -115,11 +115,17 @@ export const structuredData = [
       "talent network",
       "AI-first operations",
       "AI for manufacturing",
-      "supply chain provenance",
-      "CMMC 2.0",
+      "computer vision",
+      "industrial robotics",
+      "VSLAM",
+      "supplier relationship management",
+      "knowledge graphs",
+      "MES",
+      "ERP",
       "stablecoin payments",
-      "vendor automation",
-      "AI for transportation"
+      "vendor operations",
+      "AI for transportation",
+      "railroad maintenance"
     ]
   },
   {
@@ -241,7 +247,7 @@ export const structuredData = [
       "name": "Fort Worth, Texas, United States"
     },
     "inLanguage": "en",
-    "dateModified": "2026-08-14"
+    "dateModified": "2026-08-31"
   },
   {
     "@context": "https://schema.org",
