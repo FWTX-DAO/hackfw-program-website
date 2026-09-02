@@ -59,6 +59,11 @@ export const structuredData = [
       },
       {
         "@type": "Organization",
+        "name": "Cephlo",
+        "url": "https://cephlo.ai"
+      },
+      {
+        "@type": "Organization",
         "name": "Tech Fort Worth",
         "url": "https://www.techfortworth.org/"
       },
@@ -252,7 +257,7 @@ export const structuredData = [
       "name": "Fort Worth, Texas, United States"
     },
     "inLanguage": "en",
-    "dateModified": "2026-08-31"
+    "dateModified": "2026-09-02"
   },
   {
     "@context": "https://schema.org",
