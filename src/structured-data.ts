@@ -86,6 +86,16 @@ export const structuredData = [
         "@type": "Organization",
         "name": "OLinks Corporation",
         "url": "https://olinkscorp.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Agent Builders Club",
+        "url": "https://www.agentbuildersclub.dev/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Code & Coffee DFW",
+        "url": "https://codeandcoffee.org/"
       }
     ],
     "offers": {
