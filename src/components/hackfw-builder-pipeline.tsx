@@ -1,4 +1,4 @@
-import { useId, type ReactNode } from "react";
+import { useId, useState, type ReactNode } from "react";
 
 const bubblePath =
   "M88,168c-44.18,0-80-35.82-80-80S43.82,8,88,8c17.57,0,33.78,5.66,46.97,15.26C147.19,32.16,160.91,40,176,40s28.81-7.84,41.03-16.74C230.22,13.66,246.43,8,264,8c44.18,0,80,35.82,80,80s-35.82,80-80,80c-17.57,0-33.78-5.66-46.97-15.26C204.81,143.84,191.09,136,176,136s-28.81,7.84-41.03,16.74C121.78,162.34,105.57,168,88,168Z";
@@ -169,6 +169,7 @@ function FlywheelPaths() {
         aria-hidden="true"
         className="builder-flywheel__loop builder-flywheel__loop--desktop"
         viewBox="0 0 720 440"
+        preserveAspectRatio="none"
         fill="none"
       >
         <defs>
@@ -228,6 +229,7 @@ function FlywheelPaths() {
         aria-hidden="true"
         className="builder-flywheel__loop builder-flywheel__loop--mobile"
         viewBox="0 0 340 660"
+        preserveAspectRatio="none"
         fill="none"
       >
         <defs>
@@ -281,48 +283,59 @@ function FlywheelPaths() {
 }
 
 export function HackFwInnovationFlywheel() {
+  const [paused, setPaused] = useState(false);
+
   return (
-    <div className="builder-flywheel" data-aos="fade-up">
-      <ol
-        className="builder-flywheel__cycle"
-        aria-label="Beginner joins HackFW, becomes a Forward-Deployed Builder, and shares knowledge with the next beginner"
-      >
+    <div className="builder-flywheel" data-aos="fade-up" data-paused={paused}>
+      <div className="builder-flywheel__diagram">
         <FlywheelPaths />
-        <FlywheelStage
-          className="builder-flywheel__stage--beginner"
-          type="Start"
-          title="Beginner"
-          description="Curious and ready to build"
-          icon={<BeginnerMark />}
-        />
-        <FlywheelStage
-          className="builder-flywheel__stage--program"
-          type="Program"
-          title="HackFW"
-          description="Build, test, and compound"
-          icon={
-            <img
-              src="https://cdn.fwtx.city/logo.svg"
-              alt=""
-              width="54"
-              height="54"
-              loading="lazy"
-              decoding="async"
-            />
-          }
-        />
-        <FlywheelStage
-          className="builder-flywheel__stage--builder"
-          type="Outcome"
-          title="Forward-Deployed Builder"
-          description="Ready to create durable systems"
-          icon={<BuilderMark />}
-        />
-        <li className="builder-flywheel__return-label">
-          <span>Share Knowledge</span>
-          <small>Build the next builder</small>
-        </li>
-      </ol>
+        <ol
+          className="builder-flywheel__cycle"
+          aria-label="Beginner joins HackFW, becomes a Forward-Deployed Builder, and shares knowledge with the next beginner"
+        >
+          <FlywheelStage
+            className="builder-flywheel__stage--beginner"
+            type="Start"
+            title="Beginner"
+            description="Curious and ready to build"
+            icon={<BeginnerMark />}
+          />
+          <FlywheelStage
+            className="builder-flywheel__stage--program"
+            type="Program"
+            title="HackFW"
+            description="Build, test, and compound"
+            icon={
+              <img
+                src="https://cdn.fwtx.city/logo.svg"
+                alt=""
+                width="54"
+                height="54"
+                loading="lazy"
+                decoding="async"
+              />
+            }
+          />
+          <FlywheelStage
+            className="builder-flywheel__stage--builder"
+            type="Outcome"
+            title="Forward-Deployed Builder"
+            description="Ready to create durable systems"
+            icon={<BuilderMark />}
+          />
+        </ol>
+      </div>
+      <div className="builder-flywheel__return-label">
+        <span>Share Knowledge</span>
+        <small>Build the next builder</small>
+      </div>
+      <button
+        type="button"
+        className="builder-flywheel__motion-control"
+        onClick={() => setPaused((value) => !value)}
+      >
+        {paused ? "Play flywheel animation" : "Pause flywheel animation"}
+      </button>
     </div>
   );
 }

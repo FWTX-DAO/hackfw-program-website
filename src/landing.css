@@ -162,7 +162,7 @@
             transition-duration: 200ms;
             transition-timing-function: ease-out;
             font-weight: 500;
-            font-size: 0.8rem;
+            font-size: var(--text-small);
             display: flex;
             align-items: center;
             letter-spacing: 0.03em;
@@ -286,7 +286,7 @@
         }
 
         .hero .subtitle {
-            font-size: 0.78rem;
+            font-size: var(--text-small);
             margin-bottom: 16px;
             color: var(--cyber);
             font-weight: 600;
@@ -363,7 +363,7 @@
         .date-milestone strong {
             color: var(--amber);
             font-weight: 600;
-            font-size: 0.75rem;
+            font-size: var(--text-small);
             letter-spacing: 0.12em;
             text-transform: uppercase;
             font-variant-numeric: tabular-nums;
@@ -372,7 +372,7 @@
         .date-milestone span {
             margin-top: 7px;
             color: var(--text-secondary);
-            font-size: 0.78rem;
+            font-size: var(--text-small);
             line-height: 1.5;
             text-wrap: pretty;
         }
@@ -396,7 +396,7 @@
 
         .btn {
             padding: 13px 30px;
-            font-size: 0.8rem;
+            font-size: var(--text-small);
             border: none;
             border-radius: var(--radius);
             cursor: pointer;
@@ -414,7 +414,7 @@
         .hero .btn {
             min-height: 54px;
             padding: 12px 14px;
-            font-size: 0.76rem;
+            font-size: var(--text-small);
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -487,7 +487,7 @@
         }
 
         .mission-content p {
-            font-size: 0.95rem;
+            font-size: var(--text-small);
             margin-bottom: 20px;
             color: var(--text-secondary);
             line-height: 1.85;
@@ -525,7 +525,7 @@
 
         .mission-proof span {
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: var(--text-small);
             line-height: 1.7;
             text-wrap: pretty;
         }
@@ -569,7 +569,7 @@
 
         .flywheel-kicker {
             color: var(--text-tertiary);
-            font-size: 0.72rem;
+            font-size: var(--text-small);
             font-weight: 600;
             letter-spacing: 0.16em;
             text-transform: uppercase;
@@ -598,7 +598,7 @@
         .calendar-placeholder__kicker {
             margin-bottom: 14px;
             color: var(--cyber);
-            font-size: 0.72rem;
+            font-size: var(--text-small);
             font-weight: 600;
             letter-spacing: 0.16em;
             text-transform: uppercase;
@@ -609,7 +609,7 @@
             max-width: 600px;
             margin: 0 auto;
             color: var(--text-secondary);
-            font-size: 0.96rem;
+            font-size: var(--text-small);
             line-height: 1.8;
             text-wrap: pretty;
         }
@@ -635,7 +635,7 @@
         .calendar-event-card__eyebrow {
             margin-bottom: 9px;
             color: var(--amber-bright);
-            font-size: 0.68rem;
+            font-size: var(--text-small);
             font-weight: 700;
             letter-spacing: 0.14em;
             text-transform: uppercase;
@@ -652,7 +652,7 @@
             min-height: 3.2em;
             margin-bottom: 16px;
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: var(--text-small);
             line-height: 1.6;
         }
 
@@ -668,7 +668,7 @@
         .calendar-event-card__fallback {
             margin: 12px 0 0;
             color: var(--text-tertiary);
-            font-size: 0.76rem;
+            font-size: var(--text-small);
         }
 
         .calendar-event-card__fallback a {
@@ -746,7 +746,7 @@
         }
 
         .tier-name {
-            font-size: 0.78rem;
+            font-size: var(--text-small);
             font-weight: 600;
             color: var(--text-secondary);
             margin-bottom: 6px;
@@ -764,7 +764,7 @@
         }
 
         .tier-description {
-            font-size: 0.78rem;
+            font-size: var(--text-small);
             color: var(--text-tertiary);
             line-height: 1.5;
         }
@@ -786,7 +786,7 @@
             position: relative;
             color: var(--text-secondary);
             line-height: 1.4;
-            font-size: 0.8rem;
+            font-size: var(--text-small);
         }
 
         .tier-benefits li.included::before {
@@ -827,7 +827,7 @@
             width: 100%;
             text-align: center;
             padding: 12px 16px;
-            font-size: 0.78rem;
+            font-size: var(--text-small);
         }
 
         .tier-card.featured .tier-cta .btn {
@@ -848,7 +848,7 @@
 
         .sponsorship-note p {
             margin: 6px 0;
-            font-size: 0.85rem;
+            font-size: var(--text-small);
             color: var(--text-secondary);
         }
 
@@ -863,7 +863,7 @@
         }
 
         .tier-targets {
-            font-size: 0.85rem;
+            font-size: var(--text-small);
             color: var(--text-tertiary);
             font-style: italic;
         }
@@ -886,7 +886,7 @@
 
         .in-kind-section .in-kind-subtitle {
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: var(--text-small);
             margin-bottom: 20px;
         }
 
@@ -915,7 +915,7 @@
             position: relative;
             color: var(--text-secondary);
             line-height: 1.4;
-            font-size: 0.85rem;
+            font-size: var(--text-small);
         }
 
         .in-kind-benefits li::before {
@@ -959,7 +959,7 @@
         .industrial-base-kicker {
             margin-bottom: 10px;
             color: var(--cyber);
-            font-size: 0.72rem;
+            font-size: var(--text-small);
             font-weight: 600;
             letter-spacing: 0.2em;
             text-transform: uppercase;
@@ -1016,7 +1016,7 @@
             color: var(--amber-bright);
             background: var(--amber-dim);
             box-shadow: 0 0 0 1px var(--border-amber);
-            font-size: 0.68rem;
+            font-size: var(--text-small);
             font-weight: 600;
             letter-spacing: 0.12em;
             line-height: 1.4;
@@ -1166,7 +1166,7 @@
             max-width: 760px;
             margin: 0 auto 34px;
             color: var(--text-muted);
-            font-size: 0.88rem;
+            font-size: var(--text-small);
             line-height: 1.75;
         }
 
@@ -1186,7 +1186,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.95rem;
+            font-size: var(--text-small);
             box-shadow:
                 0 0 0 1px rgba(212, 147, 26, 0.24),
                 0 14px 44px rgba(212, 147, 26, 0.16);
@@ -1208,7 +1208,7 @@
 
         .get-involved-copy {
             margin-bottom: 28px;
-            font-size: 0.95rem;
+            font-size: var(--text-small);
         }
 
         .get-involved-cta {
@@ -1232,7 +1232,7 @@
         }
 
         .brought-to-you-text {
-            font-size: 0.7rem;
+            font-size: var(--text-small);
             color: var(--text-tertiary);
             margin-bottom: 16px;
             text-transform: uppercase;
@@ -1303,7 +1303,7 @@
             transition-timing-function: ease-out;
             display: inline-flex;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: var(--text-small);
         }
 
         .footer-links a:hover {
@@ -1312,7 +1312,7 @@
 
         .footer-content > div:first-child {
             color: var(--text-tertiary);
-            font-size: 0.8rem;
+            font-size: var(--text-small);
         }
 
         /* ========== RESPONSIVE ========== */
@@ -1396,7 +1396,7 @@
             }
 
             .hero .subtitle {
-                font-size: 0.7rem;
+                font-size: var(--text-small);
                 line-height: 1.8;
             }
 
@@ -1415,7 +1415,7 @@
             }
 
             .nav-links a {
-                font-size: 0.75rem;
+                font-size: var(--text-small);
                 padding: 6px 10px;
             }
 
@@ -1453,7 +1453,7 @@
             }
 
             .hero .btn {
-                font-size: 0.8rem;
+                font-size: var(--text-small);
             }
 
             .sponsorship-section,
@@ -1545,7 +1545,7 @@
             .nav-links a {
                 min-height: 44px;
                 padding: 7px 8px;
-                font-size: 0.7rem;
+                font-size: var(--text-small);
                 justify-content: center;
             }
 
@@ -1564,7 +1564,7 @@
             }
 
             .hero .subtitle {
-                font-size: 0.68rem;
+                font-size: var(--text-small);
                 line-height: 1.7;
                 max-width: 32ch;
                 margin: 0 auto 16px;
@@ -1607,7 +1607,7 @@
 
             .btn {
                 min-height: 48px;
-                font-size: 0.82rem;
+                font-size: var(--text-small);
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -1637,7 +1637,7 @@
             }
 
             .calendar-placeholder__copy {
-                font-size: 0.92rem;
+                font-size: var(--text-small);
                 line-height: 1.7;
             }
 
@@ -1670,7 +1670,7 @@
             }
 
             .partner-tier-heading h3 {
-                font-size: 0.95rem;
+                font-size: var(--text-small);
             }
 
             .brand-partners-grid {
@@ -1714,17 +1714,17 @@
 
             .tier-name,
             .tier-description {
-                font-size: 0.84rem;
+                font-size: var(--text-small);
             }
 
             .tier-benefits li {
-                font-size: 0.88rem;
+                font-size: var(--text-small);
                 line-height: 1.5;
             }
 
             .tier-cta .btn {
                 min-height: 50px;
-                font-size: 0.82rem;
+                font-size: var(--text-small);
             }
 
             .in-kind-section {
@@ -1734,7 +1734,7 @@
             .in-kind-section .in-kind-subtitle,
             .in-kind-benefits li,
             .sponsorship-note p {
-                font-size: 0.9rem;
+                font-size: var(--text-small);
                 line-height: 1.6;
             }
 
@@ -1750,13 +1750,13 @@
             }
 
             .donation-copy {
-                font-size: 0.98rem;
+                font-size: var(--text-small);
                 line-height: 1.75;
             }
 
             .donation-disclosure {
                 margin-bottom: 30px;
-                font-size: 0.9rem;
+                font-size: var(--text-small);
                 line-height: 1.7;
             }
 
@@ -1768,7 +1768,7 @@
                 min-width: 0;
                 min-height: 62px;
                 width: min(100%, 360px);
-                font-size: 0.95rem;
+                font-size: var(--text-small);
             }
 
             .get-involved-content {
@@ -1780,7 +1780,7 @@
             }
 
             .get-involved-copy {
-                font-size: 0.98rem;
+                font-size: var(--text-small);
                 line-height: 1.75;
             }
 
@@ -1812,11 +1812,11 @@
 
             .footer-links a {
                 min-height: 44px;
-                font-size: 0.78rem;
+                font-size: var(--text-small);
             }
 
             .footer-content > div:first-child {
-                font-size: 0.78rem;
+                font-size: var(--text-small);
             }
 
         }
@@ -1825,7 +1825,7 @@
             .nav-links a {
                 padding-right: 6px;
                 padding-left: 6px;
-                font-size: 0.68rem;
+                font-size: var(--text-small);
                 letter-spacing: 0;
             }
         }
@@ -1918,7 +1918,7 @@
             padding: 8px 12px;
             border-radius: 0;
             color: var(--text-secondary);
-            font-size: 0.72rem;
+            font-size: var(--text-small);
             letter-spacing: 0.08em;
             text-transform: uppercase;
         }
@@ -2007,7 +2007,7 @@
         .problem-tracks__kicker,
         .problem-tracks__submit-kicker {
             color: var(--amber-bright);
-            font-size: 0.69rem;
+            font-size: var(--text-small);
             letter-spacing: 0.18em;
         }
 
@@ -2053,13 +2053,13 @@
 
         .date-milestone strong {
             color: var(--amber-bright);
-            font-size: 0.7rem;
+            font-size: var(--text-small);
             letter-spacing: 0.14em;
         }
 
         .date-milestone span {
             color: var(--text-secondary);
-            font-size: 0.78rem;
+            font-size: var(--text-small);
             line-height: 1.55;
         }
 
@@ -2072,7 +2072,7 @@
             min-height: 50px;
             padding: 13px 18px;
             border-radius: 0;
-            font-size: 0.72rem;
+            font-size: var(--text-small);
             letter-spacing: 0.1em;
             transition-property: background-color, border-color, color, transform;
         }
@@ -2130,7 +2130,7 @@
         .mission-content p,
         .mission-proof span {
             color: var(--text-secondary);
-            font-size: 0.98rem;
+            font-size: var(--text-small);
             line-height: 1.8;
         }
 
@@ -2181,7 +2181,7 @@
 
         .flywheel-kicker {
             color: var(--text-tertiary);
-            font-size: 0.66rem;
+            font-size: var(--text-small);
         }
 
         .calendar-placeholder,
@@ -2740,3 +2740,245 @@
                 text-align: center;
             }
         }
+
+/* Readable campaign scale: body copy, supporting text, and controls. */
+:root {
+    --text-body: 1.125rem;
+    --text-small: 1rem;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    overflow-x: visible;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+p, li, h2, h3, a {
+    overflow-wrap: anywhere;
+}
+
+:where(a, button, summary, input, select, textarea):focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 4px;
+}
+
+@media (forced-colors: active) {
+    :where(a, button, summary, input, select, textarea):focus-visible {
+        outline-color: Highlight;
+    }
+}
+
+.skip-link {
+    position: fixed;
+    inset-block-start: 12px;
+    inset-inline-start: 16px;
+    z-index: 200;
+    padding: 12px 20px;
+    background: var(--text);
+    color: var(--void);
+    transform: translateY(-200%);
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
+main, section[id], [id="how-to-submit"] {
+    scroll-margin-top: 7rem;
+}
+
+.container {
+    padding-inline-start: max(20px, env(safe-area-inset-left));
+    padding-inline-end: max(20px, env(safe-area-inset-right));
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-links a, .footer-links a {
+    min-height: 44px;
+    font-size: var(--text-small);
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: normal;
+}
+
+.btn, .tier-cta .btn, .in-kind-cta .btn, .donation-cta .btn {
+    min-height: 52px;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-size: var(--text-small);
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    white-space: normal;
+    text-transform: none;
+}
+
+.cta-buttons, .hero .cta-buttons {
+    gap: 16px;
+}
+
+.hero h1 {
+    line-height: 1.1;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.section-title, .get-involved-title, .flywheel-title {
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.hero .subtitle, .date-milestone strong, .calendar-event-card__eyebrow,
+.industrial-base-kicker, .partner-tier-heading span, .tier-name,
+.brought-to-you-text, .flywheel-kicker {
+    font-size: var(--text-small);
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+}
+
+.hero .tagline, .mission-content p, .mission-proof span,
+.calendar-event-card__copy, .calendar-placeholder__copy,
+.sponsorship-intro, .in-kind-subtitle, .in-kind-benefits li,
+.sponsorship-note p, .donation-copy, .get-involved-copy {
+    font-size: var(--text-body);
+    line-height: 1.7;
+}
+
+.mission-content, .mission-proof {
+    text-align: start;
+}
+
+.mission-content p, .donation-copy, .get-involved-copy {
+    max-width: 65ch;
+    margin-inline: auto;
+}
+
+.mission-content p + p {
+    margin-top: 1.5em;
+}
+
+.date-milestone span, .tier-description, .tier-benefits li,
+.donation-disclosure, .footer-content, .sponsorship-disclosure {
+    font-size: var(--text-small);
+    line-height: 1.65;
+}
+
+.sponsorship-intro, .sponsorship-disclosure {
+    max-width: 65ch;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.sponsorship-intro { margin-bottom: 16px; }
+.sponsorship-disclosure { margin-bottom: 40px; }
+
+.sponsorship-tiers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    background: transparent;
+    border: 0;
+}
+
+.tier-card {
+    padding: clamp(24px, 3vw, 36px);
+    border: 1px solid var(--border);
+}
+
+.tier-benefits li { padding-block: 8px; }
+.tier-name { font-size: 1.25rem; text-transform: none; letter-spacing: 0; }
+.tier-benefits li.not-included { color: var(--text-secondary); opacity: 1; }
+.tier-benefits li.not-included::before { content: "−"; background: none; opacity: 1; top: 8px; }
+.tier-benefits li.included::before { top: 16px; }
+
+.footer-links { flex-wrap: wrap; gap: 12px 24px; }
+
+@media (max-width: 60rem) {
+    header[role="banner"] { position: relative; }
+    .header-content { justify-content: center; }
+    .hero-copy { display: block; }
+    .hero-visual { grid-row: auto; }
+    main, section[id], [id="how-to-submit"] { scroll-margin-top: 24px; }
+}
+
+@media (max-width: 40rem) {
+    .header-content { gap: 16px; }
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 12px;
+    }
+    .nav-links a { padding: 10px 8px; border: 1px solid var(--border); border-radius: 6px; }
+    .nav-links .discord-link { width: 100%; }
+    .sponsorship-tiers, .calendar-event-grid { grid-template-columns: minmax(0, 1fr); }
+    .mission-content { padding: 24px 20px; }
+    .section-title { font-size: clamp(2rem, 8vw, 3rem); }
+    .made-challenge { flex-wrap: wrap; justify-content: center; }
+    .cta-buttons .btn { width: 100%; }
+    .in-kind-section { padding: 24px 20px; }
+    .in-kind-content { gap: 24px; }
+    .in-kind-cta { min-width: 0; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* These columns also respond to the reader's chosen text size. */
+.hero-layout {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+}
+.date-location {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+}
+.logo { flex-wrap: wrap; }
+.logo-copy, .made-challenge-title { min-width: 0; overflow-wrap: anywhere; }
+
+/* Mobile navigation and registration stay in the main reading flow. */
+.nav-links .discord-link { width: auto; gap: 8px; }
+.hero-intro > .cta-buttons { margin-bottom: 24px; }
+.calendar-event-card__fallback a { width: 100%; text-decoration: none; }
+
+@media (max-width: 40rem) {
+    .nav-links { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .nav-links a { grid-column: span 2; }
+    .nav-links a:nth-child(-n + 2) { grid-column: span 3; }
+    .nav-links .discord-link { width: 100%; }
+    .nav-links .discord-icon { display: none; }
+    .hero { padding-block: 32px 48px; }
+    .hero-layout { gap: 32px; }
+    .date-location { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .date-milestone { text-align: start; padding-block: 20px; }
+    .date-milestone__register { width: 100%; margin-top: 12px; }
+    .calendar-placeholder { padding: 28px 20px; }
+    .calendar-event-card { padding: 20px 16px; }
+    .calendar-event-card__embed { display: none; }
+    .calendar-event-card__copy { min-height: 0; }
+    .calendar-event-card__fallback { margin-top: auto; }
+    .section { padding-block: 48px; }
+    .hero-visual { height: clamp(320px, 90vw, 400px); }
+}
+
+/* Keep the wordmark intact at every hero-column width. */
+.hero-intro { container-type: inline-size; }
+.hero h1 {
+    font-size: min(5.75rem, 14cqi);
+    white-space: nowrap;
+    overflow-wrap: normal;
+}

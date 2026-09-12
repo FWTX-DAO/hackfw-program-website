@@ -163,19 +163,18 @@ function ChevronRightIcon() {
 export default function VerticalTabs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [expanded, setExpanded] = useState(true);
   const reduceMotion = useReducedMotion();
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const baseId = useId();
-  const panelId = `${baseId}-panel`;
 
   const activate = useCallback(
     (index: number, nextDirection: number, { focus = false } = {}) => {
+      setExpanded(true);
+      if (focus) tabRefs.current[index]?.focus();
       if (index === activeIndex) return;
       setDirection(nextDirection);
       setActiveIndex(index);
-      if (focus) {
-        tabRefs.current[index]?.focus();
-      }
     },
     [activeIndex],
   );
@@ -192,17 +191,22 @@ export default function VerticalTabs() {
   }, [activate, activeIndex]);
 
   const handleTabClick = (index: number) => {
-    activate(index, index > activeIndex ? 1 : -1);
+    if (index === activeIndex) {
+      setExpanded((value) => !value);
+    } else {
+      activate(index, index > activeIndex ? 1 : -1);
+    }
   };
 
-  const handleTabsKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+  const handleTabsKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    const currentIndex = tabRefs.current.indexOf(event.currentTarget);
     const lastIndex = PROBLEM_TRACKS.length - 1;
     let nextIndex: number | null = null;
 
     if (event.key === "ArrowDown" || event.key === "ArrowRight") {
-      nextIndex = (activeIndex + 1) % PROBLEM_TRACKS.length;
+      nextIndex = (currentIndex + 1) % PROBLEM_TRACKS.length;
     } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
-      nextIndex = (activeIndex - 1 + PROBLEM_TRACKS.length) % PROBLEM_TRACKS.length;
+      nextIndex = (currentIndex - 1 + PROBLEM_TRACKS.length) % PROBLEM_TRACKS.length;
     } else if (event.key === "Home") {
       nextIndex = 0;
     } else if (event.key === "End") {
@@ -239,16 +243,12 @@ export default function VerticalTabs() {
             </p>
           </div>
 
-          <div
-            className="problem-tracks__tabs"
-            role="tablist"
-            aria-label="HackFW problem tracks"
-            aria-orientation="vertical"
-            onKeyDown={handleTabsKeyDown}
-          >
+          <div className="problem-tracks__tabs">
             {PROBLEM_TRACKS.map((track, index) => {
               const isActive = index === activeIndex;
+              const isOpen = isActive && expanded;
               const tabId = `${baseId}-tab-${track.id}`;
+              const panelId = `${baseId}-panel-${track.id}`;
 
               return (
                 <div
@@ -269,71 +269,52 @@ export default function VerticalTabs() {
                     }}
                     id={tabId}
                     type="button"
-                    role="tab"
-                    aria-selected={isActive}
+                    aria-expanded={isOpen}
                     aria-controls={panelId}
-                    tabIndex={isActive ? 0 : -1}
                     className="problem-tracks__tab"
+                    onKeyDown={handleTabsKeyDown}
                     onClick={() => handleTabClick(index)}
                   >
                     <span className="problem-tracks__number">/{track.id}</span>
                     <span className="problem-tracks__tab-title">
                       {track.title}
                     </span>
+                    <span className="problem-tracks__disclosure" aria-hidden="true">
+                      {isOpen ? "−" : "+"}
+                    </span>
                   </button>
-                  <AnimatePresence initial={false} mode="wait">
-                    {isActive && (
-                      <motion.div
-                        key={`copy-${track.id}`}
-                        className="problem-tracks__copy"
-                        initial={
-                          reduceMotion
-                            ? false
-                            : { opacity: 0, height: 0, y: 8 }
-                        }
-                        animate={{ opacity: 1, height: "auto", y: 0 }}
-                        exit={
-                          reduceMotion
-                            ? undefined
-                            : { opacity: 0, height: 0, y: -12 }
-                        }
-                        transition={{
-                          duration: 0.3,
-                          ease: [0.23, 1, 0.32, 1],
-                        }}
-                      >
-                        <p className="problem-tracks__summary">
-                          {track.summary}
-                        </p>
-                        <p className="problem-tracks__label">Where to aim</p>
-                        <ul className="problem-tracks__list">
-                          {track.useCases.map((useCase) => (
-                            <li key={useCase}>{useCase}</li>
-                          ))}
-                        </ul>
-                        <a
-                          href={DEVPOST_URL}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Build this track
-                          <span aria-hidden="true">↗</span>
-                        </a>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={tabId}
+                    className="problem-tracks__copy"
+                    hidden={!isOpen}
+                  >
+                    <p className="problem-tracks__summary">
+                      {track.summary}
+                    </p>
+                    <p className="problem-tracks__label">Where to aim</p>
+                    <ul className="problem-tracks__list">
+                      {track.useCases.map((useCase) => (
+                        <li key={useCase}>{useCase}</li>
+                      ))}
+                    </ul>
+                    <a
+                      href={DEVPOST_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Build this track
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div
-          id={panelId}
-          className="problem-tracks__gallery"
-          role="tabpanel"
-          aria-labelledby={`${baseId}-tab-${activeTrack.id}`}
-        >
+        <div className="problem-tracks__gallery">
           <div className="problem-tracks__image-wrap">
             <AnimatePresence
               initial={false}
@@ -349,7 +330,6 @@ export default function VerticalTabs() {
                 exit={reduceMotion ? undefined : "exit"}
                 transition={imageTransition}
                 className="problem-tracks__image-slide"
-                onClick={handleNext}
               >
                 <img
                   src={activeTrack.image}
@@ -372,7 +352,7 @@ export default function VerticalTabs() {
                   event.stopPropagation();
                   handlePrevious();
                 }}
-                whileTap={{ scale: 0.96 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.96 }}
               >
                 <ChevronLeftIcon />
               </motion.button>
@@ -383,7 +363,7 @@ export default function VerticalTabs() {
                   event.stopPropagation();
                   handleNext();
                 }}
-                whileTap={{ scale: 0.96 }}
+                whileTap={reduceMotion ? undefined : { scale: 0.96 }}
               >
                 <ChevronRightIcon />
               </motion.button>

@@ -5,8 +5,11 @@ import {
   type ErrorInfo,
   type ReactNode,
   useEffect,
+  useRef,
   useState,
 } from "react";
+
+import type { Application } from "@splinetool/runtime";
 
 import { Card } from "@/components/ui/card";
 import { SplineScene } from "@/components/ui/splite";
@@ -57,43 +60,69 @@ function StaticSystemFallback() {
 export function HeroSpline() {
   const [sceneEnabled, setSceneEnabled] = useState(false);
   const [sceneLoaded, setSceneLoaded] = useState(false);
+  const [sceneRequested, setSceneRequested] = useState(false);
+  const applicationRef = useRef<Application | null>(null);
+  const enabledRef = useRef(false);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    const connection = (
-      navigator as Navigator & {
-        connection?: { saveData?: boolean };
-      }
-    ).connection;
-
-    setSceneEnabled(!reduceMotion && !connection?.saveData);
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean };
+    }).connection;
+    const updatePreference = () => {
+      const enabled = !preference.matches && !connection?.saveData;
+      setSceneEnabled(enabled);
+      if (enabled) setSceneRequested(true);
+    };
+    updatePreference();
+    preference.addEventListener("change", updatePreference);
+    return () => preference.removeEventListener("change", updatePreference);
   }, []);
+
+  useEffect(() => {
+    enabledRef.current = sceneEnabled;
+    if (sceneEnabled) applicationRef.current?.play();
+    else applicationRef.current?.stop();
+  }, [sceneEnabled]);
 
   const fallback = <StaticSystemFallback />;
 
   return (
     <Card
       className="hero-spline-card relative h-full w-full overflow-hidden border-0 bg-transparent text-white shadow-none"
-      role="img"
-      aria-label="Interactive three-dimensional industrial compute system"
+      role="group"
+      aria-label="Three-dimensional industrial compute system"
     >
       <div className="hero-spline-card__grid" aria-hidden="true" />
       <div className="hero-spline-card__glow" aria-hidden="true" />
 
       <div className="hero-spline-card__viewport">
         {!sceneLoaded && fallback}
-        {sceneEnabled ? (
+        {sceneRequested ? (
           <SplineBoundary fallback={null}>
             <SplineScene
               scene={SCENE_URL}
               className="h-full w-full"
-              onLoad={() => setSceneLoaded(true)}
+              onLoad={(application) => {
+                applicationRef.current = application;
+                if (!enabledRef.current) application.stop();
+                setSceneLoaded(true);
+              }}
             />
           </SplineBoundary>
         ) : null}
       </div>
+
+      <button
+        type="button"
+        className="hero-spline-card__motion-control"
+        onClick={() => {
+          setSceneRequested(true);
+          setSceneEnabled((enabled) => !enabled);
+        }}
+      >
+        {sceneEnabled ? "Pause animation" : "Play animation"}
+      </button>
 
       <div className="hero-spline-card__status" aria-hidden="true">
         <span />
