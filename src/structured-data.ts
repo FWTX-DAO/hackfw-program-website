@@ -86,6 +86,16 @@ export const structuredData = [
         "@type": "Organization",
         "name": "OLinks Corporation",
         "url": "https://olinkscorp.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Supabase",
+        "url": "https://supabase.com"
+      },
+      {
+        "@type": "Organization",
+        "name": "AI Texas",
+        "url": "https://aitxcommunity.com"
       }
     ],
     "offers": {
