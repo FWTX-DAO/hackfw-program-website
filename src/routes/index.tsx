@@ -48,7 +48,7 @@ const parserOptions: HTMLReactParserOptions = {
       domNode instanceof DomElement &&
       domNode.attribs.id === "kickoff-countdown-root"
     ) {
-      return <FlipClock targetDate="2026-10-01T00:00:00-05:00" />;
+      return <FlipClock targetDate="2026-10-01T13:00:00-05:00" />;
     }
 
     if (

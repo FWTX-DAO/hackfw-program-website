@@ -12,8 +12,8 @@ export const structuredData = [
     "description": "Fort Worth DAO's flagship HackFW hackathon and grassroots cyber workforce development program. The October 2026 MADE Challenge grows a deep-tech builder economy and talent network for AI-first operations through industrial systems building, virtual incubation, and Fort Worth gatherings.",
     "image": "https://cdn.fwtx.city/ogimage.png",
     "url": "https://hack.fwtx.city",
-    "startDate": "2026-10-01",
-    "endDate": "2026-10-30",
+    "startDate": "2026-10-01T13:00:00-05:00",
+    "endDate": "2026-10-30T15:00:00-05:00",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
     "location": [
@@ -23,7 +23,7 @@ export const structuredData = [
       },
       {
         "@type": "Place",
-        "name": "Fort Worth - location and time to be announced",
+        "name": "Fort Worth",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Fort Worth",

@@ -10,12 +10,12 @@ The program is designed to grow Fort Worth's deep-tech builder economy and long-
 
 ## October 2026 program
 
-- HackFW Kickoff: October 1, 2026, in Fort Worth. Register at [Luma](https://luma.com/event/evt-vzYQOnne0xQFSwr).
+- HackFW Kickoff: Thursday, October 1, 2026, from 1:00 PM to 3:30 PM CDT. Register at [Luma](https://luma.com/event/evt-vzYQOnne0xQFSwr).
 - Virtual incubation: October 1-30, 2026, with technical support from Fort Worth DAO and MADE.
-- Enterprise Demo Day: October 30, 2026, in Fort Worth. Register at [Luma](https://luma.com/event/evt-9LMaWTtYbqpbGYs).
+- Enterprise Demo Day: Friday, October 30, 2026, from 9:30 AM to 3:00 PM CDT. Register at [Luma](https://luma.com/event/evt-9LMaWTtYbqpbGYs).
 - Builder registration and current rules: [HackFW on Devpost](https://hackfw.devpost.com).
 
-Event venues and times are published as they are confirmed. Do not infer a venue from the city-level location; the canonical page is the source of truth for current logistics.
+Event venue details are available through registration. Do not infer a venue; the canonical Luma pages are the source of truth for current logistics.
 
 ## Organizer
 
