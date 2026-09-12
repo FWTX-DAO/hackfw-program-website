@@ -144,6 +144,10 @@ export const structuredData = [
       "vendor operations",
       "AI for transportation",
       "railroad maintenance",
+      "tokenized industrial real estate",
+      "real estate marketplaces",
+      "property data rooms",
+      "AI agents",
       "open forum",
       "creative industrial AI"
     ]

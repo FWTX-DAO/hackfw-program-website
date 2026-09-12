@@ -66,12 +66,28 @@ const PROBLEM_TRACKS = [
   },
   {
     id: "04",
+    title: "Tokenized Industrial Real Estate",
+    summary:
+      "Build a marketplace for warehouses, factories, and industrial sites that humans and AI agents can navigate together. Connect property facts, source documents, ownership rights, and transaction history in one clear record, so buyers, operators, and investors can compare opportunities, verify claims, and move a deal forward.",
+    useCases: [
+      "Property records: title, surveys, zoning, environmental reports, leases, rent rolls, and operating costs, organized by asset with document versions and source links",
+      "Industrial fit: power capacity, clear height, loading docks, floor loads, and transport access in comparable, searchable fields",
+      "Tokenized interests: connect each token to the owning entity, offering documents, holder rights, and transfer rules",
+      "Deal history: offers, due diligence, approvals, escrow, closing, ownership transfers, and distributions in one auditable timeline",
+      "Human and agent access: readable deal rooms and structured data for search, comparison, and questions, with source citations, missing-data flags, document permissions, and human approval for commitments",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop",
+    alt: "Warehouse interior with storage racks and industrial floor space",
+  },
+  {
+    id: "05",
     title: "Open Forum",
     summary:
       "Bring ideas and solutions that aren't already in the brief. This is the lane for work at the intersection of technology, manufacturing, and AI that the other tracks don't cover — problems nobody is focusing on yet, shipped as a system someone could actually run.",
     useCases: [
       "An overlooked industrial or civic problem at the intersection of technology, manufacturing, and AI",
-      "A working prototype a plant, a crew, or a city could try — not a restatement of the three named tracks",
+      "A working prototype a plant, a crew, or a city could try — not a restatement of the four named tracks",
       "A clear operator: who runs this after Demo Day, and why it isn't already standard practice",
     ],
     image:
@@ -83,7 +99,7 @@ const PROBLEM_TRACKS = [
 const SUBMISSION_RULES = [
   {
     title: "Problem track",
-    body: "Name which of the four tracks you submitted toward: AI for Manufacturing, Supplier Relationship Management, AI for Transportation, or Open Forum.",
+    body: "Name which of the five tracks you submitted toward: AI for Manufacturing, Supplier Relationship Management, AI for Transportation, Tokenized Industrial Real Estate, or Open Forum.",
   },
   {
     title: "GitHub link",
@@ -237,7 +253,7 @@ export default function VerticalTabs() {
             <h2 id="problem-tracks-title">Pick a system to move</h2>
             <span className="problem-tracks__kicker">(PROBLEM TRACKS)</span>
             <p className="problem-tracks__lede">
-              Four tracks. Three industrial surfaces, plus an open forum for
+              Five tracks. Four industrial surfaces, plus an open forum for
               ideas that aren't already in focus. Pick one. Ship a system
               someone could actually run.
             </p>
