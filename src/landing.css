@@ -1127,6 +1127,17 @@
             background: #f4f4f4;
         }
 
+        .sponsor-logo--square,
+        .sponsor-logo--square img {
+            max-height: 104px;
+        }
+
+        /* The source includes transparent space above and below the wordmark. */
+        .sponsor-logo--code-coffee img {
+            width: 200px;
+            max-height: none;
+        }
+
         .sponsor-logo svg {
             max-width: 200px;
             max-height: 80px;

@@ -96,6 +96,21 @@ export const structuredData = [
         "@type": "Organization",
         "name": "AI Texas",
         "url": "https://aitxcommunity.com"
+      },
+      {
+        "@type": "Organization",
+        "name": "United Way of Tarrant County",
+        "url": "https://www.unitedwaytarrant.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Agent Builders Club",
+        "url": "https://www.agentbuildersclub.dev/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Dallas/Fort Worth Code and Coffee",
+        "url": "https://www.meetup.com/dfw-code-coffee/"
       }
     ],
     "offers": {
@@ -271,7 +286,7 @@ export const structuredData = [
       "name": "Fort Worth, Texas, United States"
     },
     "inLanguage": "en",
-    "dateModified": "2026-09-02"
+    "dateModified": "2026-09-12"
   },
   {
     "@context": "https://schema.org",
