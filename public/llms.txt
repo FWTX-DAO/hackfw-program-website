@@ -25,9 +25,9 @@ Contact: [community@fwtx.city](mailto:community@fwtx.city)
 
 ## Problem tracks
 
-Five tracks. Four industrial surfaces, plus an open forum for ideas that aren't already in focus. Pick one. Submit on [HackFW Devpost](https://hackfw.devpost.com).
+Five tracks. Four industrial surfaces, plus an open forum for ideas that aren't already in focus. Pick one. Canonical share link: [hack.fwtx.city/#problem-tracks](https://hack.fwtx.city/#problem-tracks). Submit on [HackFW Devpost](https://hackfw.devpost.com).
 
-1. **AI for Manufacturing** — computer vision, robotics, and CAD-to-production on the plant floor: overhead/station cameras for tracking, spotting, and monitoring (self-checkout-style coverage of a production line); in-process quality; safe robot and drone VSLAM with a human in the loop; generative CAD that a shop can actually make; CAD-to-production and station-level work instructions.
+1. **AI for Manufacturing** — computer vision, robotics, and CAD-to-production on the plant floor: overhead/station cameras for tracking, spotting, and monitoring (self-checkout-style coverage of a production line); in-process quality; safe robot and drone VSLAM with a human in the loop; generative CAD that a shop can actually make; CAD-to-production and station-level work instructions; agent loops and graph engineering so production and customer service share one capture → decide → act path.
 2. **Supplier Relationship Management** — knowledge graphs of suppliers, parts, certifications, and live order state; API-first MES/ERP (or an adapter) sharing production and order-line expectations upstream and downstream; vendor ops plus modern payment rails, including stablecoins where they shorten time-to-pay.
 3. **AI for Transportation** — computer vision for track and railroad maintenance: geometry, fastener, and surface inspection; defect detection that flags, localizes, and ranks work; predictive maintenance into a crew-ready work order; humans stay in the loop.
 4. **Tokenized Industrial Real Estate** — a marketplace for warehouses, factories, and industrial sites that humans and AI agents can navigate together. Organize title, surveys, zoning, environmental reports, leases, rent rolls, and operating costs by asset with document versions and source links. Make power capacity, clear height, loading docks, floor loads, and transport access comparable and searchable. Connect tokens to the owning entity, offering documents, holder rights, and transfer rules. Track offers, due diligence, approvals, escrow, closing, ownership transfers, and distributions. Provide readable deal rooms and structured data with source citations, missing-data flags, document permissions, and human approval for commitments.
@@ -43,7 +43,7 @@ Canonical rules also live at [hack.fwtx.city/#how-to-submit](https://hack.fwtx.c
 4. Confirm every participant is registered in the Fort Worth DAO Talent Database at [talent.fwtx.city](https://talent.fwtx.city).
 5. Attend Demo Day in person for judging: [luma.com/ygyxb4yy](https://luma.com/ygyxb4yy).
 
-Build for other people: readable, maintainable, deployable, end-to-end. Think like a bootstrapped startup taking a pilot to a floor.
+Build standard also lives at [hack.fwtx.city/#build-standard](https://hack.fwtx.city/#build-standard): high-quality product, low-friction UX. Thin path (capture → decide → act), README and a demo that boots, UX a floor operator can use, a pilot to a floor — not a weekend prototype that dies on a laptop.
 
 ## Key topics
 
