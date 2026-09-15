@@ -2015,7 +2015,6 @@
         .winning-system__kicker,
         .industrial-base-kicker,
         .calendar-placeholder__kicker,
-        .problem-tracks__kicker,
         .problem-tracks__submit-kicker {
             color: var(--amber-bright);
             font-size: var(--text-small);
@@ -2918,7 +2917,7 @@ main, section[id], [id="how-to-submit"] {
     .header-content { justify-content: center; }
     .hero-copy { display: block; }
     .hero-visual { grid-row: auto; }
-    main, section[id], [id="how-to-submit"] { scroll-margin-top: 24px; }
+    main, section[id], [id="how-to-submit"], [id="build-standard"] { scroll-margin-top: 24px; }
 }
 
 @media (max-width: 40rem) {
@@ -2968,8 +2967,7 @@ main, section[id], [id="how-to-submit"] {
 
 @media (max-width: 40rem) {
     .nav-links { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .nav-links a { grid-column: span 2; }
-    .nav-links a:nth-child(-n + 2) { grid-column: span 3; }
+    .nav-links a { grid-column: span 3; }
     .nav-links .discord-link { width: 100%; }
     .nav-links .discord-icon { display: none; }
     .hero { padding-block: 32px 48px; }

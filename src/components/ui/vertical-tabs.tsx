@@ -31,6 +31,7 @@ const PROBLEM_TRACKS = [
       "Safe robot and drone VSLAM through a live factory — localize, map occupancy, move without colliding, keep a human in the loop",
       "Generative CAD: propose and iterate parts a shop can actually cut, print, or machine — manufacturable geometry, not render-only form",
       "CAD to production and work instructions: turn a released model into travelers, setups, toolpaths, and station-level instructions the floor can follow",
+      "Agent loops and graph engineering: connect machines, orders, and people so production and customer service share one capture → decide → act path — quote to job, job to cell, exception to a human",
     ],
     image:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1400&auto=format&fit=crop",
@@ -121,6 +122,13 @@ const SUBMISSION_RULES = [
     href: DEMO_DAY_URL,
     hrefLabel: "luma.com/ygyxb4yy",
   },
+] as const;
+
+const BUILD_STANDARD = [
+  "Thin path: capture → decide → act — not a pile of notebooks",
+  "README, a known environment, and a demo that boots",
+  "High-quality, low-friction UX a floor operator can use without a walkthrough",
+  "A bootstrapped startup taking a pilot to a floor — not a weekend prototype that dies on a laptop",
 ] as const;
 
 const slideVariants = {
@@ -251,7 +259,9 @@ export default function VerticalTabs() {
         <div className="problem-tracks__content">
           <div className="problem-tracks__header">
             <h2 id="problem-tracks-title">Pick a system to move</h2>
-            <span className="problem-tracks__kicker">(PROBLEM TRACKS)</span>
+            <a className="problem-tracks__kicker" href="#problem-tracks">
+              #problem-tracks
+            </a>
             <p className="problem-tracks__lede">
               Five tracks. Four industrial surfaces, plus an open forum for
               ideas that aren't already in focus. Pick one. Ship a system
@@ -441,17 +451,21 @@ export default function VerticalTabs() {
             Submit on Devpost
           </a>
         </div>
-        <div className="problem-tracks__submit-note">
+        <div
+          className="problem-tracks__submit-note"
+          id="build-standard"
+        >
           <p className="problem-tracks__submit-kicker">Build standard</p>
           <h3>Ship it like a product</h3>
           <p>
-            Mind the ergonomics of your code. Teammates, judges, and a plant
-            engineer should be able to clone, run, and maintain it. Prefer a
-            thin end-to-end path — capture, decide, act — over a pile of
-            notebooks. README, environment, and a demo that boots. Think like a
-            bootstrapped startup taking a pilot to a floor, not a weekend
-            prototype that dies on a laptop.
+            High-quality product, low-friction UX. A teammate, a judge, and a
+            plant engineer should be able to clone it, run it, and keep it.
           </p>
+          <ul className="problem-tracks__list problem-tracks__standard">
+            {BUILD_STANDARD.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

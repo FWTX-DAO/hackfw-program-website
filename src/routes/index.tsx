@@ -131,5 +131,22 @@ function HackFwLandingPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const scrollToHash = () => {
+      const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      if (!id) return;
+      document.getElementById(id)?.scrollIntoView({ block: "start" });
+    };
+
+    scrollToHash();
+    const retry = window.setTimeout(scrollToHash, 400);
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      window.clearTimeout(retry);
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, []);
+
   return parse(landingMarkup, parserOptions);
 }

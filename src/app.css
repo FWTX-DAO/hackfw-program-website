@@ -920,13 +920,19 @@
 }
 
 .problem-tracks__kicker {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 40px;
   margin-left: 2px;
   color: var(--text-tertiary);
   font-size: var(--text-small);
   font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: none;
+  transition-property: color;
+  transition-duration: 150ms;
 }
 
 .problem-tracks__tabs {
@@ -988,7 +994,8 @@
 .problem-tracks__tab:focus-visible,
 .problem-tracks__controls button:focus-visible,
 .problem-tracks__copy a:focus-visible,
-.problem-tracks__submit a:focus-visible {
+.problem-tracks__submit a:focus-visible,
+.problem-tracks__kicker:focus-visible {
   outline: 2px solid var(--cyber);
   outline-offset: 3px;
 }
@@ -1283,6 +1290,14 @@
   margin-top: 24px;
 }
 
+.problem-tracks__standard {
+  margin-top: 16px;
+}
+
+.problem-tracks__submit-note {
+  scroll-margin-top: 84px;
+}
+
 @media (max-width: 900px) {
   .problem-tracks__layout {
     grid-template-columns: 1fr;
@@ -1301,7 +1316,8 @@
   }
 
   .problem-tracks,
-  .problem-tracks__submit {
+  .problem-tracks__submit,
+  .problem-tracks__submit-note {
     scroll-margin-top: 148px;
   }
 
@@ -1356,7 +1372,8 @@
   .problem-tracks__tab,
   .problem-tracks__copy a,
   .problem-tracks__submit a,
-  .problem-tracks__controls button {
+  .problem-tracks__controls button,
+  .problem-tracks__kicker {
     transition: none;
   }
 }
@@ -1541,7 +1558,14 @@
 .problem-tracks__kicker,
 .problem-tracks__submit-kicker {
   color: var(--amber-bright);
+}
+
+.problem-tracks__submit-kicker {
   letter-spacing: 0.18em;
+}
+
+.problem-tracks__kicker:hover {
+  color: var(--text);
 }
 
 .problem-tracks__progress {
